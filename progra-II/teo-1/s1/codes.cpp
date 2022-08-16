@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     //variables
-    char letra = "a";
+    char letra = 'a';
     bool si = true;
     int entero = 9;
     float decimal = 3.14;
