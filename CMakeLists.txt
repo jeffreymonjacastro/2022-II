@@ -4,4 +4,4 @@ project(2022_II)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(2022_II
-        progra-II/lab-102/s1/labs1.cpp)
+        progra-II/lab-102/s1/ticket.cpp)
