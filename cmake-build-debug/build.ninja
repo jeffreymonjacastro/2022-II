@@ -49,8 +49,14 @@ cmake_ninja_workdir = C$:/Users/Usuario/Github/2022-II/cmake-build-debug/
 
 build cmake_object_order_depends_target_2022_II: phony || CMakeFiles/2022_II.dir
 
-build CMakeFiles/2022_II.dir/progra-II/lab-102/s1/ticket.cpp.obj: CXX_COMPILER__2022_II_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s1/ticket.cpp || cmake_object_order_depends_target_2022_II
-  DEP_FILE = CMakeFiles\2022_II.dir\progra-II\lab-102\s1\ticket.cpp.obj.d
+build CMakeFiles/2022_II.dir/progra-II/lab-102/s1/funciones.cpp.obj: CXX_COMPILER__2022_II_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s1/funciones.cpp || cmake_object_order_depends_target_2022_II
+  DEP_FILE = CMakeFiles\2022_II.dir\progra-II\lab-102\s1\funciones.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\2022_II.dir
+  OBJECT_FILE_DIR = CMakeFiles\2022_II.dir\progra-II\lab-102\s1
+
+build CMakeFiles/2022_II.dir/progra-II/lab-102/s1/main_funciones.cpp.obj: CXX_COMPILER__2022_II_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s1/main_funciones.cpp || cmake_object_order_depends_target_2022_II
+  DEP_FILE = CMakeFiles\2022_II.dir\progra-II\lab-102\s1\main_funciones.cpp.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\2022_II.dir
   OBJECT_FILE_DIR = CMakeFiles\2022_II.dir\progra-II\lab-102\s1
@@ -63,7 +69,7 @@ build CMakeFiles/2022_II.dir/progra-II/lab-102/s1/ticket.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable 2022_II.exe
 
-build 2022_II.exe: CXX_EXECUTABLE_LINKER__2022_II_Debug CMakeFiles/2022_II.dir/progra-II/lab-102/s1/ticket.cpp.obj
+build 2022_II.exe: CXX_EXECUTABLE_LINKER__2022_II_Debug CMakeFiles/2022_II.dir/progra-II/lab-102/s1/funciones.cpp.obj CMakeFiles/2022_II.dir/progra-II/lab-102/s1/main_funciones.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\2022_II.dir
@@ -72,6 +78,39 @@ build 2022_II.exe: CXX_EXECUTABLE_LINKER__2022_II_Debug CMakeFiles/2022_II.dir/p
   TARGET_FILE = 2022_II.exe
   TARGET_IMPLIB = lib2022_II.dll.a
   TARGET_PDB = 2022_II.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Cpp_course
+
+
+#############################################
+# Order-only phony target for Cpp_course
+
+build cmake_object_order_depends_target_Cpp_course: phony || CMakeFiles/Cpp_course.dir
+
+build CMakeFiles/Cpp_course.dir/Cpp_course/Ejercicio_Expresiones_2.cpp.obj: CXX_COMPILER__Cpp_course_Debug C$:/Users/Usuario/Github/2022-II/Cpp_course/Ejercicio_Expresiones_2.cpp || cmake_object_order_depends_target_Cpp_course
+  DEP_FILE = CMakeFiles\Cpp_course.dir\Cpp_course\Ejercicio_Expresiones_2.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\Cpp_course.dir
+  OBJECT_FILE_DIR = CMakeFiles\Cpp_course.dir\Cpp_course
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Cpp_course
+
+
+#############################################
+# Link the executable Cpp_course.exe
+
+build Cpp_course.exe: CXX_EXECUTABLE_LINKER__Cpp_course_Debug CMakeFiles/Cpp_course.dir/Cpp_course/Ejercicio_Expresiones_2.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Cpp_course.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Cpp_course.exe
+  TARGET_IMPLIB = libCpp_course.dll.a
+  TARGET_PDB = Cpp_course.exe.dbg
 
 
 #############################################
@@ -101,6 +140,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build 2022_II: phony 2022_II.exe
 
+build Cpp_course: phony Cpp_course.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -109,7 +150,7 @@ build 2022_II: phony 2022_II.exe
 #############################################
 # Folder: C:/Users/Usuario/Github/2022-II/cmake-build-debug
 
-build all: phony 2022_II.exe
+build all: phony 2022_II.exe Cpp_course.exe
 
 # =============================================================================
 # Built-in targets

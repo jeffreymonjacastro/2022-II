@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "2022_II",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "2022_II::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-2022_II-Debug-ca7a256fdb8a46b368f5.json",
+					"jsonFile" : "target-2022_II-Debug-e9a7c4935b7b858ab32e.json",
 					"name" : "2022_II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Cpp_course::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cpp_course-Debug-71253b37aa5b2674d8fc.json",
+					"name" : "Cpp_course",
 					"projectIndex" : 0
 				}
 			]
