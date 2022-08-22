@@ -15,6 +15,7 @@ void codes_1(){
         cout<<"El numero es impar";
 }
 
+// negación de la condición IF
 void codes_2(){
     int booleano = 0;
 
@@ -23,6 +24,7 @@ void codes_2(){
 
 };
 
+// estructura SWITCH
 void codes_3(){
     int numero = 0;
     cout<<"Ingrese un numero entre 1 y 4: "; cin>>numero;
@@ -46,10 +48,46 @@ void codes_3(){
     }
 }
 
+// estructura WHILE
+void codes_4(){
+    int i=1;
 
+    while (i <= 7){
+        cout<<"UTEC"<<endl;
+        ++i;
+    }
+}
+
+// estructura DO WHILE
+void codes_5(){
+    int i=1;
+
+    do {
+        cout<<"Romy"<<endl;
+        i++;
+    } while (i <= 7);
+}
+
+// estructura FOR
+void codes_6(){
+    for(int i = 1; i <= 7; i++)
+        cout<<"Te amo Romy"<<endl;
+}
+
+// Ejemplos FOR
+void codes_7(){
+    int suma = 0;
+
+    for(int contador = 10; contador <= 95; contador += 5) {
+        suma += contador;
+        cout << suma << endl;
+    }
+    cout<<"La sumatoria es: "<<suma;
+}
+
+// Run
 int main(){
-    codes_3();
-
+    codes_7();
 
     return 0;
 }
