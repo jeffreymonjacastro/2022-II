@@ -30,16 +30,20 @@ void ejercicio2(){
 
 // EJERCICIO 3: Distancia euclidiana
 void ejercicio3(){
-    double x1, y1, x2, y2, d;
+    int x1, y1, x2, y2;
+    float d_e, d_m;
 
     cout<<"x1:"; cin>>x1;
     cout<<"y1:"; cin>>y1;
     cout<<"x2:"; cin>>x2;
     cout<<"y2:"; cin>>y2;
 
-    d = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2));
+    d_e = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2));
+    d_m = (x2-x1) + (y2-y1);
 
-    cout<<"La distancia es: "<<d;
+    cout<<"La distancia euclidiana es: "<<d_e<<endl;
+    cout<<"La distancia de manhattan es: "<<d_m<<endl;
+
 }
 
 // Run
