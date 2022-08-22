@@ -76,9 +76,9 @@ void codes_6(){
 
 // Ejemplos FOR
 void codes_7(){
-    int suma = 0;
+    int contador, suma;
 
-    for(int contador = 10; contador <= 95; contador += 5) {
+    for(contador = 10, suma = 0; contador <= 95; contador += 5) {
         suma += contador;
         cout << suma << endl;
     }
