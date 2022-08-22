@@ -41,37 +41,70 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/Usuario/Github/2022-II/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target 2022_II
+# Object build statements for EXECUTABLE target semana1
 
 
 #############################################
-# Order-only phony target for 2022_II
+# Order-only phony target for semana1
 
-build cmake_object_order_depends_target_2022_II: phony || CMakeFiles/2022_II.dir
+build cmake_object_order_depends_target_semana1: phony || CMakeFiles/semana1.dir
 
-build CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj: CXX_COMPILER__2022_II_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s2/ejercicio1.cpp || cmake_object_order_depends_target_2022_II
-  DEP_FILE = CMakeFiles\2022_II.dir\progra-II\lab-102\s2\ejercicio1.cpp.obj.d
+build CMakeFiles/semana1.dir/progra-II/lab-102/s1/main_funciones.cpp.obj: CXX_COMPILER__semana1_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s1/main_funciones.cpp || cmake_object_order_depends_target_semana1
+  DEP_FILE = CMakeFiles\semana1.dir\progra-II\lab-102\s1\main_funciones.cpp.obj.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles\2022_II.dir
-  OBJECT_FILE_DIR = CMakeFiles\2022_II.dir\progra-II\lab-102\s2
+  OBJECT_DIR = CMakeFiles\semana1.dir
+  OBJECT_FILE_DIR = CMakeFiles\semana1.dir\progra-II\lab-102\s1
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target 2022_II
+# Link build statements for EXECUTABLE target semana1
 
 
 #############################################
-# Link the executable 2022_II.exe
+# Link the executable semana1.exe
 
-build 2022_II.exe: CXX_EXECUTABLE_LINKER__2022_II_Debug CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj
+build semana1.exe: CXX_EXECUTABLE_LINKER__semana1_Debug CMakeFiles/semana1.dir/progra-II/lab-102/s1/main_funciones.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\2022_II.dir
+  OBJECT_DIR = CMakeFiles\semana1.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = 2022_II.exe
-  TARGET_IMPLIB = lib2022_II.dll.a
-  TARGET_PDB = 2022_II.exe.dbg
+  TARGET_FILE = semana1.exe
+  TARGET_IMPLIB = libsemana1.dll.a
+  TARGET_PDB = semana1.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target semana2
+
+
+#############################################
+# Order-only phony target for semana2
+
+build cmake_object_order_depends_target_semana2: phony || CMakeFiles/semana2.dir
+
+build CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj: CXX_COMPILER__semana2_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s2/ejercicio2.cpp || cmake_object_order_depends_target_semana2
+  DEP_FILE = CMakeFiles\semana2.dir\progra-II\lab-102\s2\ejercicio2.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\semana2.dir
+  OBJECT_FILE_DIR = CMakeFiles\semana2.dir\progra-II\lab-102\s2
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target semana2
+
+
+#############################################
+# Link the executable semana2.exe
+
+build semana2.exe: CXX_EXECUTABLE_LINKER__semana2_Debug CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\semana2.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = semana2.exe
+  TARGET_IMPLIB = libsemana2.dll.a
+  TARGET_PDB = semana2.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Cpp_course
@@ -132,9 +165,11 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build 2022_II: phony 2022_II.exe
-
 build Cpp_course: phony Cpp_course.exe
+
+build semana1: phony semana1.exe
+
+build semana2: phony semana2.exe
 
 # =============================================================================
 # Folder targets.
@@ -144,7 +179,7 @@ build Cpp_course: phony Cpp_course.exe
 #############################################
 # Folder: C:/Users/Usuario/Github/2022-II/cmake-build-debug
 
-build all: phony 2022_II.exe Cpp_course.exe
+build all: phony semana1.exe semana2.exe Cpp_course.exe
 
 # =============================================================================
 # Built-in targets
