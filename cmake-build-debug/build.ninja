@@ -49,17 +49,11 @@ cmake_ninja_workdir = C$:/Users/Usuario/Github/2022-II/cmake-build-debug/
 
 build cmake_object_order_depends_target_2022_II: phony || CMakeFiles/2022_II.dir
 
-build CMakeFiles/2022_II.dir/progra-II/lab-102/s1/funciones.cpp.obj: CXX_COMPILER__2022_II_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s1/funciones.cpp || cmake_object_order_depends_target_2022_II
-  DEP_FILE = CMakeFiles\2022_II.dir\progra-II\lab-102\s1\funciones.cpp.obj.d
+build CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj: CXX_COMPILER__2022_II_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s2/ejercicio1.cpp || cmake_object_order_depends_target_2022_II
+  DEP_FILE = CMakeFiles\2022_II.dir\progra-II\lab-102\s2\ejercicio1.cpp.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\2022_II.dir
-  OBJECT_FILE_DIR = CMakeFiles\2022_II.dir\progra-II\lab-102\s1
-
-build CMakeFiles/2022_II.dir/progra-II/lab-102/s1/main_funciones.cpp.obj: CXX_COMPILER__2022_II_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s1/main_funciones.cpp || cmake_object_order_depends_target_2022_II
-  DEP_FILE = CMakeFiles\2022_II.dir\progra-II\lab-102\s1\main_funciones.cpp.obj.d
-  FLAGS = -g
-  OBJECT_DIR = CMakeFiles\2022_II.dir
-  OBJECT_FILE_DIR = CMakeFiles\2022_II.dir\progra-II\lab-102\s1
+  OBJECT_FILE_DIR = CMakeFiles\2022_II.dir\progra-II\lab-102\s2
 
 
 # =============================================================================
@@ -69,7 +63,7 @@ build CMakeFiles/2022_II.dir/progra-II/lab-102/s1/main_funciones.cpp.obj: CXX_CO
 #############################################
 # Link the executable 2022_II.exe
 
-build 2022_II.exe: CXX_EXECUTABLE_LINKER__2022_II_Debug CMakeFiles/2022_II.dir/progra-II/lab-102/s1/funciones.cpp.obj CMakeFiles/2022_II.dir/progra-II/lab-102/s1/main_funciones.cpp.obj
+build 2022_II.exe: CXX_EXECUTABLE_LINKER__2022_II_Debug CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\2022_II.dir

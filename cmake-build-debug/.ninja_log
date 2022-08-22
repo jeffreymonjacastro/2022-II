@@ -1,13 +1,19 @@
 # ninja log v5
-1185	1337	6823640701750321	2022_II.exe	3fa7cde9104303f3
+1250	1408	6823645537154876	2022_II.exe	3fa7cde9104303f3
 5	1233	6823622095625954	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/labs1.cpp.obj	46d126df69b81ee0
-2	357	6823645430435429	build.ninja	2afdff185c936da2
+2	357	6828771691756628	build.ninja	2afdff185c936da2
 7	1107	6823608173357887	CMakeFiles/2022_II.dir/progra-II/teo-1/s1/codes.cpp.obj	57ff40aa02a12217
 6	1100	6823626958574669	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/ticket.cpp.obj	b2e537e39c18791e
 6	1139	6823629689370415	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/tayloy.cpp.obj	d8b68e91633ba80c
 13	1184	6823640700182743	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/main_funciones.cpp.obj	a651de121ff3f851
-7	1203	6823640588294141	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/funciones.cpp.obj	3a8d4550a2cf5b4c
 7	1249	6823645535555266	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/funciones.cpp.obj	3a8d4550a2cf5b4c
-1250	1408	6823645537154876	2022_II.exe	3fa7cde9104303f3
 0	1122	6823645652920945	CMakeFiles/Cpp_course.dir/Cpp_course/Ejercicio_Expresiones_2.cpp.obj	d00941ec4f89fbb
 1123	1292	6823645654719603	Cpp_course.exe	44e860cbc277776a
+9	1371	6828771313248708	CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj	f53af861746faab7
+7	186	6828771708810113	2022_II.exe	a4d9ca08fb74989a
+8	1113	6828771790439945	CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj	f53af861746faab7
+1114	1285	6828771792086266	2022_II.exe	a4d9ca08fb74989a
+8	1157	6828771934664213	CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj	f53af861746faab7
+1158	1324	6828771936338727	2022_II.exe	a4d9ca08fb74989a
+6	1118	6828772480435838	CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj	f53af861746faab7
+1118	1272	6828772481934912	2022_II.exe	a4d9ca08fb74989a
