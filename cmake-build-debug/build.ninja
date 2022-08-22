@@ -82,8 +82,8 @@ build semana1.exe: CXX_EXECUTABLE_LINKER__semana1_Debug CMakeFiles/semana1.dir/p
 
 build cmake_object_order_depends_target_semana2: phony || CMakeFiles/semana2.dir
 
-build CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj: CXX_COMPILER__semana2_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s2/ejercicio2.cpp || cmake_object_order_depends_target_semana2
-  DEP_FILE = CMakeFiles\semana2.dir\progra-II\lab-102\s2\ejercicio2.cpp.obj.d
+build CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicios.cpp.obj: CXX_COMPILER__semana2_Debug C$:/Users/Usuario/Github/2022-II/progra-II/lab-102/s2/ejercicios.cpp || cmake_object_order_depends_target_semana2
+  DEP_FILE = CMakeFiles\semana2.dir\progra-II\lab-102\s2\ejercicios.cpp.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\semana2.dir
   OBJECT_FILE_DIR = CMakeFiles\semana2.dir\progra-II\lab-102\s2
@@ -96,7 +96,7 @@ build CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj: CXX_COMPIL
 #############################################
 # Link the executable semana2.exe
 
-build semana2.exe: CXX_EXECUTABLE_LINKER__semana2_Debug CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj
+build semana2.exe: CXX_EXECUTABLE_LINKER__semana2_Debug CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicios.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\semana2.dir

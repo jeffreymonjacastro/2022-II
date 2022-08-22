@@ -1,7 +1,7 @@
 # ninja log v5
-1	1432	6828798972948588	build.ninja	2afdff185c936da2
-5	1233	6823622095625954	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/labs1.cpp.obj	46d126df69b81ee0
 1118	1272	6828772481934912	2022_II.exe	a4d9ca08fb74989a
+5	1233	6823622095625954	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/labs1.cpp.obj	46d126df69b81ee0
+2	436	6828807567562680	build.ninja	2afdff185c936da2
 7	1107	6823608173357887	CMakeFiles/2022_II.dir/progra-II/teo-1/s1/codes.cpp.obj	57ff40aa02a12217
 0	4080	6828782977773650	CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj	5b77b3edfdf9a5d1
 6	1100	6823626958574669	CMakeFiles/2022_II.dir/progra-II/lab-102/s1/ticket.cpp.obj	b2e537e39c18791e
@@ -11,10 +11,9 @@
 0	1122	6823645652920945	CMakeFiles/Cpp_course.dir/Cpp_course/Ejercicio_Expresiones_2.cpp.obj	d00941ec4f89fbb
 1123	1292	6823645654719603	Cpp_course.exe	44e860cbc277776a
 6	1118	6828772480435838	CMakeFiles/2022_II.dir/progra-II/lab-102/s2/ejercicio1.cpp.obj	f53af861746faab7
-4080	4288	6828782979821511	semana2.exe	15519889682b6e33
-8	1466	6828798864696957	CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj	2fc4ad569b7b0d5b
-8	181	6828798991693149	semana2.exe	55339ab8f55a4f10
-8	1126	6828799684991987	CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj	2fc4ad569b7b0d5b
-1127	1294	6828799686620953	semana2.exe	55339ab8f55a4f10
-6	1144	6828800388787059	CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj	2fc4ad569b7b0d5b
-1145	1312	6828800390521087	semana2.exe	55339ab8f55a4f10
+1134	1311	6828806468878901	semana2.exe	55339ab8f55a4f10
+8	1133	6828806467148511	CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicio2.cpp.obj	2fc4ad569b7b0d5b
+1	1194	6828811844488537	CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicios.cpp.obj	5fef3bea53c9072a
+1194	1379	6828811846268234	semana2.exe	cb1441516627edf4
+7	1119	6828812072301191	CMakeFiles/semana2.dir/progra-II/lab-102/s2/ejercicios.cpp.obj	5fef3bea53c9072a
+1120	1283	6828812073875534	semana2.exe	cb1441516627edf4
