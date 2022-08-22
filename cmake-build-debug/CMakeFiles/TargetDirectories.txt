@@ -1,5 +1,0 @@
-C:/Users/Usuario/Github/2022-II/cmake-build-debug/CMakeFiles/semana1.dir
-C:/Users/Usuario/Github/2022-II/cmake-build-debug/CMakeFiles/semana2.dir
-C:/Users/Usuario/Github/2022-II/cmake-build-debug/CMakeFiles/Cpp_course.dir
-C:/Users/Usuario/Github/2022-II/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Usuario/Github/2022-II/cmake-build-debug/CMakeFiles/rebuild_cache.dir

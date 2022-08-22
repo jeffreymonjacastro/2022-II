@@ -46,9 +46,32 @@ void ejercicio3(){
 
 }
 
+// EJERCICIO 4: suma de dos ángulos
+void ejercicio4(){
+    int a1, a1_g, a1_m, a1_s, a2, a2_g, a2_m, a2_s, sum;
+
+    cout<<"angulo 1: "<<endl;
+    cout<<"grados:"; cin>>a1_g;
+    cout<<"minutos:"; cin>>a1_m;
+    cout<<"segundos:"; cin>>a1_s;
+
+    cout<<"angulo 2: "<<endl;
+    cout<<"grados:"; cin>>a2_g;
+    cout<<"minutos:"; cin>>a2_m;
+    cout<<"segundos:"; cin>>a2_s;
+
+    a1 = a1_g*3600 + a1_m*60 + a1_s;
+    a2 = a2_g*3600 + a2_m*60 + a2_s;
+    sum = a1 + a2;
+
+    cout<<"angulo 1: "<<a1_g<<" grados, "<<a1_m<<" minutos, "<<a1_s<<" segundos"<<endl;
+    cout<<"angulo 2: "<<a2_g<<" grados, "<<a2_m<<" minutos, "<<a2_s<<" segundos"<<endl;
+    cout<<"La suma es: "<<sum/3600<<" grados, "<<(sum%3600)/60<<" minutos, "<<(sum/3600)%60<<" segundos";
+}
+
 // Run
 int main(){
-    ejercicio3();
+    ejercicio4();
 
     return 0;
 }
