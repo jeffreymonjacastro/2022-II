@@ -36,9 +36,31 @@ void e1(){
     cout<<"La cantidad de numeros impares es:"<<i_impares<<endl;
 }
 
+// Ejemplo 002
+void e2(){
+    int n, i=0, pares=0, impares=0;
+
+    cout<<"Numero: "; cin>>n;
+
+    while(n<100) {
+        cout << "Numero: "; cin >> n;
+    }
+
+    while(n!=0){
+        if(n%2 == 0) pares++;
+        else impares++;
+
+        n = n/10;
+        i++;
+    }
+
+    cout<<"Numero de digitos:"<<i<<endl;
+    cout<<"Digitos pares:"<<pares<<endl;
+    cout<<"Digitos impares:"<<impares<<endl;
+}
 
 int main(){
-    e1();
+    e2();
 
     return 0;
 }
