@@ -1,10 +1,11 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 // Ejemplo 001
 void e1(){
-    int n, i=0, i_pares=0, i_impares=0;
+    int n, i, i_pares=0, i_impares=0;
 
     cout<<"Ingrese un numero: "; cin>>n;
 
@@ -59,8 +60,27 @@ void e2(){
     cout<<"Digitos impares:"<<impares<<endl;
 }
 
+// Ejemplo 003
+void e3(){
+    int n, i, v = 2;
+    double x = 3;
+
+    cout<<"Iteraciones: "; cin>>n;
+
+    for(i=1; i<=n; i++){
+        if(i % 2 == 0) {
+            x -= 4.0/((v)*(v+1)*(v+2));
+        }else{
+            x += 4.0/((v)*(v+1)*(v+2));
+        }
+        v += 2;
+
+        cout<<"El valor de PI para i: "<<i<<" es: "<<x<<endl;
+    }
+}
+
 int main(){
-    e2();
+    e3();
 
     return 0;
 }
