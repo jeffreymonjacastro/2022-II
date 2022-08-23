@@ -79,8 +79,33 @@ void e3(){
     }
 }
 
+// Ejercicio 5
+void e5(){
+    int i=0, personas;
+    double  m_i=0, f_i=0, v_i=0;
+    string bebida;
+
+    cout<<"Cuantas personas haran la encuesta? (entre 5 y 30)"; cin>>personas;
+
+    for(i=1; i<=personas; i++){
+        cout<<"Que bebida prefiere?"<<endl;
+        cout<<"Mango Frappuccino (M/m)"<<endl;
+        cout<<"Fresa Creme Frappuccino (F/f)"<<endl;
+        cout<<"Vainilla Creme Frappuccino (V/v)"<<endl;
+        cin>>bebida;
+
+        if(bebida == "M" || bebida == "m") m_i++;
+        else if(bebida == "F" || bebida == "f") f_i++;
+        else v_i++;
+    }
+
+    cout<<(m_i/personas)*100<<"% prefieren Mango Frappuccino"<<endl;
+    cout<<(f_i/personas)*100<<"% prefieren Fresa Creme Frappuccino"<<endl;
+    cout<<(v_i/personas)*100<<"% prefieren Vainilla Creme Frappuccino"<<endl;
+}
+
 int main(){
-    e3();
+    e5();
 
     return 0;
 }
