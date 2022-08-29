@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Perímetro conociendo los puntos de un polígono
 void ejercicio001(){
     int n_lados;
     cout<<"Lados: "; cin>>n_lados;
@@ -56,6 +57,7 @@ void ejercicio001(){
     cout<<"Su perimetro es: "<<s;
 }
 
+// Selección de denominaciones
 void ejercicio002(){
     int n;
 
@@ -79,6 +81,7 @@ void ejercicio002(){
     }
 }
 
+// Siguiente y anterior número primo de un entero
 void ejercicio003(){
     int n;
 
@@ -114,6 +117,7 @@ void ejercicio003(){
 
 }
 
+// Dibujando un cuadrado bordeado
 void ejercicio004(){
     int fil, col;
 
@@ -138,8 +142,27 @@ void ejercicio004(){
     }
 }
 
+// Árbol de números
+void ejercicio005(){
+    int fil, idx = 1;
+
+    cout<<"Filas"; cin>>fil;
+
+    for(int i=1; i<=fil; i++){
+        for(int j=1; j<=(2*fil)-1; j++){
+            if(j==1 or j==(2*fil)-1){
+                cout<<" ";
+            }else{
+                cout<<idx;
+                idx++;
+            }
+        }
+        cout<<endl;
+    }
+}
+
 int main(){
-    ejercicio004();
+    ejercicio005();
 
     return 0;
 }
