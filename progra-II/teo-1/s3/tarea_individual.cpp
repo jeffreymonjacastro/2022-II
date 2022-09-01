@@ -24,22 +24,81 @@ void e(){
     cout<<endl;
 }
 
+void titulo(string texto){
+    string palabra;
+    for(int i = 1; i <= texto.length(); i++){
+        palabra += "=";
+    }
+
+    cout<<palabra<<endl;
+    cout<<texto<<endl;
+    cout<<palabra<<endl;
+}
 
 void result(){
-    string nombre_apellido, codigo, usuario, clave;
+    string nombre, apellido, codigo, usuario, clave;
+    bool prueba_codigo = false, prueba_clave = false;
 
-    cout<<"=========="<<endl;
-    cout<<"UTEC PLUS"<<endl;
-    cout<<"=========="<<endl;
+    titulo("UTEC PLUS");
     e();
 
     cout<<"Ingrese sus datos"<<endl;
     e();
 
-    cout<<"Nombre y apellido: "<<endl; cin>>nombre_apellido;
-    cout<<"Codigo: "<<endl; cin>>codigo;
-    cout<<"Usuario: "<<endl; cin>>usuario;
-    cout<<"Clave: "<<endl; cin>>clave;
+    cout<<"Nombre: "<<endl; cin>>nombre;
+    cout<<"Apellido: "<<endl; cin>>apellido;
+
+    // Validación del código
+    while(!prueba_codigo){
+        cout<<"Codigo: "<<endl; cin>>codigo;
+
+        if(codigo.length() == 8) {
+            for (char i: codigo) {
+                if (isdigit(i)) {
+                    prueba_codigo = true;
+                } else {
+                    prueba_codigo = false;
+                    break;
+                }
+            }
+        }
+    }
+
+    // Creación automática del usuario
+    for (char i : apellido){
+        usuario += tolower(i);
+    }
+
+    // validación de la clave
+    bool mayus, minus, digit;
+
+    while(!prueba_clave){
+        cout<<"Clave: "<<endl; cin>>clave;
+        mayus = minus = digit = false;
+
+        for(char i : clave) {
+            if (isupper(i))
+                mayus = true;
+            if (islower(i))
+                minus = true;
+            if (isdigit(i))
+                digit = true;
+        }
+
+        if(mayus && minus && digit)
+            prueba_clave = true;
+    }
+
+    e();
+    cout<<"Bienvenido "<<nombre<<" "<<apellido<<endl;
+    e();
+
+    cout<<"Tu codigo es: "<<codigo<<endl;
+    cout<<"Tu usuario es: "<<usuario<<endl;
+    cout<<"Tu clave es: "<<clave<<endl;
+    e();
+
+    titulo("FIN DEL PROGRAMA");
 }
 
 int main(){
