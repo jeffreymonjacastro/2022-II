@@ -1,10 +1,10 @@
 #include <iostream>
-#include "tarea_individual.h"
 
 using namespace std;
 
 // Declaración de variables globales
 string nombre, apellido, codigo, usuario, clave;
+int continuar = 1;
 
 
 // Funcion para dar un espacio
@@ -41,8 +41,6 @@ void mostrar_usuario(){
 
 // Función preguntar modificar
 int preguntar_modificar() {
-    int continuar;
-
     cout<<"Desea modificar algun dato?"<<endl;
     cout<<"1. Si"<<endl;
     cout<<"2. No"<<endl;
@@ -72,21 +70,24 @@ int preguntar_modificar() {
 
 
 // Función ingresar_usuario
-void ingresar_usuario(){
+void ingresar_usuario() {
     bool prueba_codigo = false, prueba_clave = false;
 
     e();
-    cout<<"Ingrese sus datos: "<<endl;
+    cout << "Ingrese sus datos: " << endl;
     e();
 
-    cout<<"Nombre: "<<endl; cin>>nombre;
-    cout<<"Apellido: "<<endl; cin>>apellido;
+    cout << "Nombre: " << endl;
+    cin >> nombre;
+    cout << "Apellido: " << endl;
+    cin >> apellido;
 
     // Validación del código
-    while(!prueba_codigo){
-        cout<<"Codigo: "<<endl; cin>>codigo;
+    while (!prueba_codigo) {
+        cout << "Codigo: " << endl;
+        cin >> codigo;
 
-        if(codigo.length() == 8) {
+        if (codigo.length() == 8) {
             for (char i: codigo) {
                 if (isdigit(i))
                     prueba_codigo = true;
@@ -98,16 +99,18 @@ void ingresar_usuario(){
         }
     }
 
-    cout<<"Usuario: "<<endl; cin>>usuario;
+    cout << "Usuario: " << endl;
+    cin >> usuario;
 
     // validación de la clave
     bool mayus, minus, digit;
 
-    while(!prueba_clave){
-        cout<<"Clave: "<<endl; cin>>clave;
+    while (!prueba_clave) {
+        cout << "Clave: " << endl;
+        cin >> clave;
         mayus = minus = digit = false;
 
-        for(char i : clave) {
+        for (char i: clave) {
             if (isupper(i))
                 mayus = true;
             if (islower(i))
@@ -116,39 +119,40 @@ void ingresar_usuario(){
                 digit = true;
         }
 
-        if(mayus && minus && digit)
+        if (mayus && minus && digit)
             prueba_clave = true;
+
     }
 
+    // Modificar datos
     int numero;
 
-    numero = preguntar_modificar();
+    while (continuar == 1){
+        numero = preguntar_modificar();
+        if(continuar==2)
+            break;
 
         switch (numero) {
             case 1:
                 cout<<"Cambiar nombre: "<<endl; cin>>nombre;
-                preguntar_modificar();
                 break;
             case 2:
                 cout<<"Cambiar apellido: "<<endl; cin>>apellido;
-                preguntar_modificar();
                 break;
             case 3:
                 cout<<"Cambiar codigo: "<<endl; cin>>codigo;
-                preguntar_modificar();
                 break;
             case 4:
                 cout<<"Cambiar usuario: "<<endl; cin>>usuario;
-                preguntar_modificar();
                 break;
             case 5:
                 cout<<"Cambiar clave: "<<endl; cin>>clave;
-                preguntar_modificar();
                 break;
             default:
                 cout<<"No existe esa opcion";
 
         }
+    }
 }
 
 
