@@ -3,26 +3,11 @@
 
 using namespace std;
 
+// Declaración de variables globales
 string nombre, apellido, codigo, usuario, clave;
 
-/*
-Escriba un programa en C++ que permita ingresar los datos de un estudiante: nombre y apellido, código (de 8 dígitos)usuario  (será el apellido del estudiante) y clave (una combinación de letras minúsculas, mayusculas y dígitos), a través de un menú.
 
-El programa debe verificar si el código tiene 8 dígitos, y si la clave tiene las condiciones señaladas. De lo contrario se pedirá ingresar el dato (pero solo ese dato) de nuevo. Solo se tienen 3 opciones para ingresar los datos correctamente. Luego de ingresar los datos (input), el programa preguntará si se quiere modificar algún dato.
-
-Se abrirá entonces el menú de nuevo para que el usuario escoja un dato para modificar, o ningún dato para salir.
-
-Se debe, finalmente imprimir los datos del estudiante actualizados.
-
-Notas:
-
-El código debe ser eficiente. Debe tener un numero mínimo de instrucciones (líneas de código)
-Las entradas de codigo (input) deben estar claramente especificadas
-El estudiante decide el formato de salidas de código (output)
-Considere la rúbrica del ejercicio (en Canvas)
-
-
-*/
+// Funcion para dar un espacio
 void e(){
     cout<<endl;
 }
@@ -41,7 +26,7 @@ void titulo(string texto){
 }
 
 
-// Mostrar datos
+// Función mostrar datos
 void mostrar_usuario(){
     e();
     cout<<"Bienvenido "<<nombre<<" "<<apellido<<endl;
@@ -54,7 +39,7 @@ void mostrar_usuario(){
 }
 
 
-// Preguntar modificar
+// Función preguntar modificar
 int preguntar_modificar() {
     int continuar;
 
@@ -77,10 +62,12 @@ int preguntar_modificar() {
 
         cin >> opcion;
 
+        return opcion;
+
     } else
         mostrar_usuario();
 
-    return continuar;
+    return 0;
 }
 
 
