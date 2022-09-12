@@ -15,6 +15,8 @@ add_executable(semana5 progra-II/lab-102/s5/practicing.cpp)
 
 add_executable(Cpp_course progra-II/teo-1/s3/tarea/main.cpp)
 
+add_executable(pc1 progra-II/lab-102/s5/PC1/p3.cpp)
+
 add_executable(hilda progra-II/others/hilda.cpp progra-II/others/UFunciones.cpp progra-II/others/UFunciones.h)
 
 add_executable(tarea progra-II/teo-1/s3/tarea/tarea_individual.cpp progra-II/teo-1/s3/tarea/tarea_individual.h)
