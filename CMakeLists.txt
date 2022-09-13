@@ -11,11 +11,11 @@ add_executable(semana3 progra-II/teo-1/s3/tarea/main.cpp)
 
 add_executable(semana4 progra-II/lab-102/s4/Codes4.cpp)
 
-add_executable(semana5 progra-II/teo-1/s5/codes4.cpp)
+add_executable(semana5 progra-II/lab-102/s5/codes2.cpp)
 
 add_executable(Cpp_course progra-II/teo-1/s3/tarea/main.cpp)
 
-add_executable(pc1 progra-II/lab-102/s5/PC1/p1.cpp)
+add_executable(pc1 progra-II/lab-102/s5/PC1/p1.cpp progra-II/lab-102/s5/codes2.cpp)
 
 add_executable(hilda progra-II/others/hilda.cpp progra-II/others/UFunciones.cpp progra-II/others/UFunciones.h)
 
