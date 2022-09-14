@@ -3,4 +3,4 @@ project(2022_II)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(others progra-II/others/Figuras.cpp)
+add_executable(others progra-II/others/valerypc1.cpp)
