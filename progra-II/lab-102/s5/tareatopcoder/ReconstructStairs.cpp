@@ -4,6 +4,13 @@
 using namespace std;
 
 
+// Función para imprimir vectores
+void imprimirVec(vector<int> vec){
+    for(int i : vec)
+        cout<<i<<' ';
+}
+
+// Función para quitar los 0 de los costados
 vector<int> simplification(vector<int> vec){
     vector<int> newvec = {};
 
@@ -32,7 +39,7 @@ vector<int> simplification(vector<int> vec){
     return newvec;
 }
 
-
+// Función para agregar valores a la izquierda
 vector<int> increase(const vector<int> &vec){
     vector<int> newvec;
 
@@ -48,14 +55,21 @@ vector<int> increase(const vector<int> &vec){
     return newvec;
 }
 
-
+// Main
 int main(){
-    vector<int> v = {0,0,3,2,1,0,0};
-    vector<int> v2, v3;
+    vector<int> v, v2, v3;
+
+    int input;
+    while((cin>>input))
+        v.push_back(input);
+
+//    imprimirVec(v); cout<<endl;
 
     v2 = simplification(v);
+//    imprimirVec(v2); cout<<endl;
 
     v3 = increase(v2);
+//    imprimirVec(v3); cout<<endl;
 
     int n1, n2, sum = 0, formula, result;
 
@@ -67,7 +81,7 @@ int main(){
 
     n2 = v3.size();
 
-    formula = ((n2)*(n2+1))/2;
+    formula = ((n2) * (n2 + 1)) / 2;
 
     result = formula - sum;
 
