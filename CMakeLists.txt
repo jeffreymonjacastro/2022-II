@@ -7,6 +7,6 @@ add_executable(others progra-II/others/Asesoría.cpp)
 
 add_executable(bonus progra-II/lab-102/s5/Bonus/p2.cpp)
 
-add_executable(topcoder progra-II/lab-102/s5/tareatopcoder/ReconstructStairs.cpp)
+add_executable(topcoder progra-II/lab-102/s5/tareatopcoder/BenjaminSoto_ReconstrucStairs.cpp)
 
 add_executable(test progra-II/lab-102/s5/tareatopcoder/test.cpp)
