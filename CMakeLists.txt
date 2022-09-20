@@ -11,4 +11,4 @@ add_executable(topcoder progra-II/lab-102/s5/tareatopcoder/ReconstructStairs.cpp
 
 add_executable(test progra-II/lab-102/s5/tareatopcoder/test.cpp)
 
-add_executable(s6 progra-II/teo-1/s6/codes3.cpp)
+add_executable(s6 progra-II/lab-102/s6/tuesdaycodes.cpp)
