@@ -12,6 +12,28 @@ double volumen(double radio) {
     return result;
 }
 
+// funcion para crear lista dinámica de double
+double* lista_dinamica(double &a, double &b, double &c, double &d){
+    double* lista = new double[4];
+    lista[0] = a;
+    lista[1] = b;
+    lista[2] = c;
+    lista[3] = d;
+
+    return lista;
+}
+
+// funcion para crear lista dinámica de string
+string* lista_dinamica2(string &a, string &b, string &c, string &d){
+    string* lista = new string[4];
+    lista[0] = a;
+    lista[1] = b;
+    lista[2] = c;
+    lista[3] = d;
+
+    return lista;
+}
+
 
 int main(){
     // Contadores
@@ -21,27 +43,16 @@ int main(){
 
     // Datos
     double m1 = 0.05, m2 = 0.8, m3 = 1, m4 = 0.1;
-    double* masas = new double[4];
-    masas[0] = m1;
-    masas[1] = m2;
-    masas[2] = m3;
-    masas[3] = m4;
+    double* masas;
+    masas = lista_dinamica(m1, m2, m3, m4);
 
     double d1 = 0.4, d2 = 0.9, d3 = 1, d4 = 0.5;
-
-    double* diametros = new double[4];
-    diametros[0] = d1;
-    diametros[1] = d2;
-    diametros[2] = d3;
-    diametros[3] = d4;
+    double* diametros;
+    diametros = lista_dinamica(d1, d2, d3, d4);
 
     string planeta1 = "Mercurio", planeta2 = "Venus", planeta3 = "Tierra", planeta4 = "Marte";
-
-    string* planetas = new string[4];
-    planetas[0] = planeta1;
-    planetas[1] = planeta2;
-    planetas[2] = planeta3;
-    planetas[3] = planeta4;
+    string* planetas;
+    planetas = lista_dinamica2(planeta1, planeta2, planeta3, planeta4);
 
     // Cantidad de interacciones
     for(int i = 0; i < 1000; i++) {
@@ -113,6 +124,15 @@ int main(){
         volumen_planeta = volumen(diametros[final[1]]/2);
         cout<<"sobrevive "<<planetas[final[1]]<<", con masa de "<<masas[final[1]]<<" y volumen de "<<volumen_planeta<<", luego de "<<anios<<" anios"<<endl;
     }
+
+    // Liberando memoria
+    delete masas;
+    delete diametros;
+    delete planetas;
+
+    masas = nullptr;
+    diametros = nullptr;
+    planetas = nullptr;
 
     return 0;
 }
