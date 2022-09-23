@@ -1,44 +1,25 @@
 #include <iostream>
 #include <cstdlib>
+#include <cmath>
 
 
 using namespace std;
 
-// eliminardato
-void eliminardato(int* lista, int n){
-    // Preguntar si la lista no está vacía
-    if(lista != nullptr){
-        int* idx_borrar;
-        int* anterior = nullptr;
-
-        idx_borrar = lista;
-
-        // Recorrer la lista
-        while(idx_borrar != nullptr && *idx_borrar != n){
-            anterior = idx_borrar;
-            idx_borrar = idx_borrar+1;
-        }
-
-        //El elemento no ha sido encontrado
-        if(idx_borrar == nullptr)
-            cout<<"El elemento no ha sido encontrado"<<endl;
-
-        else if(anterior == nullptr){
-            lista = lista+1;
-            delete idx_borrar;
-        } else {
-            anterior = idx_borrar+1;
-            delete idx_borrar;
-        }
-    }
+// hallar volumen
+double volumen(double radio) {
+    double result;
+    result = (4 * M_PI * radio * radio * radio)/3;
+    return result;
 }
 
 
-
 int main(){
+    // Contadores
     double aleatorio = 0;
     int colisiones = 0;
     int anios = 0;
+
+    // Datos
     double m1 = 0.05, m2 = 0.8, m3 = 1, m4 = 0.1;
     double* masas = new double[4];
     masas[0] = m1;
@@ -48,6 +29,12 @@ int main(){
 
     double d1 = 0.4, d2 = 0.9, d3 = 1, d4 = 0.5;
 
+    double* diametros = new double[4];
+    diametros[0] = d1;
+    diametros[1] = d2;
+    diametros[2] = d3;
+    diametros[3] = d4;
+
     string planeta1 = "Mercurio", planeta2 = "Venus", planeta3 = "Tierra", planeta4 = "Marte";
 
     string* planetas = new string[4];
@@ -56,6 +43,7 @@ int main(){
     planetas[2] = planeta3;
     planetas[3] = planeta4;
 
+    // Cantidad de interacciones
     for(int i = 0; i < 1000; i++) {
         if(colisiones == 3)
             break;
@@ -73,13 +61,13 @@ int main(){
     if(masas[0] > masas[1]){
         masas[0] += (masas[1]/2);
         masas[1] = 0;
-        d1 *= 2;
-        cout<<"sobrevive "<<planetas[0]<<" con masa de "<<masas[0]<<endl;
+        diametros[0] *= 2;
+        cout<<"sobrevive "<<planetas[0]<<", con masa de "<<masas[0]<<endl;
     } else {
         masas[1] += (masas[0]/2);
         masas[0] = 0;
-        d2 *= 2;
-        cout<<"sobrevive "<<planetas[1]<<" con masa de "<<masas[1]<<endl;
+        diametros[1] *= 2;
+        cout<<"sobrevive "<<planetas[1]<<", con masa de "<<masas[1]<<endl;
     }
 
     //Segunda colisión
@@ -88,20 +76,20 @@ int main(){
     if(masas[2] > masas[3]){
         masas[2] += (masas[3]/2);
         masas[3] = 0;
-        d2 *= 2;
-        cout<<"sobrevive "<<planetas[2]<<" con masa de "<<masas[2]<<endl;
+        diametros[2] *= 2;
+        cout<<"sobrevive "<<planetas[2]<<", con masa de "<<masas[2]<<endl;
     } else {
         masas[3] += (masas[2]/2);
         masas[2] = 0;
-        d2 *= 2;
-        cout<<"sobrevive "<<planetas[3]<<" con masa de "<<masas[3]<<endl;
+        diametros[3] *= 2;
+        cout<<"sobrevive "<<planetas[3]<<", con masa de "<<masas[3]<<endl;
     }
 
     // Tercera colisión
     int* final = new int[2];
+    int j = 0;
 
     for(int i = 0; i < 4; i++){
-        int j = 0;
         if(masas[i] != 0){
             final[j] = i;
             j++;
@@ -110,53 +98,21 @@ int main(){
 
     cout<<"colisionan "<<planetas[final[0]]<<" y "<<planetas[final[1]]<<endl;
 
+    double volumen_planeta;
+
     if(masas[final[0]] > masas[final[1]]){
         masas[final[0]] += (masas[final[1]]/2);
         masas[final[1]] = 0;
-        d2 *= 2;
-        cout<<"sobrevive "<<planetas[final[0]]<<" con masa de "<<masas[2]<<endl;
+        diametros[final[0]] *= 2;
+        volumen_planeta = volumen(diametros[final[0]]/2);
+        cout<<"sobrevive "<<planetas[final[0]]<<", con masa de "<<masas[final[0]]<<" y volumen de "<<volumen_planeta<<", luego de "<<anios<<" anios"<<endl;
     } else {
-        masas[3] += (masas[2]/2);
-        masas[2] = 0;
-        d2 *= 2;
-        cout<<"sobrevive "<<planetas[3]<<" con masa de "<<masas[3]<<endl;
+        masas[final[1]] += (masas[final[0]]/2);
+        masas[final[0]] = 0;
+        diametros[final[1]] *= 2;
+        volumen_planeta = volumen(diametros[final[1]]/2);
+        cout<<"sobrevive "<<planetas[final[1]]<<", con masa de "<<masas[final[1]]<<" y volumen de "<<volumen_planeta<<", luego de "<<anios<<" anios"<<endl;
     }
-    }
-
-
-
-    cout<<"colisiones: "<<colisiones<<endl;
-    cout<<"anios: "<<anios;
 
     return 0;
 }
-
-
-/*
-switch(colisiones){
-            case 1:
-                cout<<"colisionan "<<planeta1<<" y "<<planeta2;
-
-                if(m1 > m2){
-                    m1 += (m2/2);
-                    d1 *= 2;
-                    cout<<"sobrevive "<<planeta1<<" con masa de "<<m1;
-                } else {
-                    m2 += (m1/2);
-                    d2 *= 2;
-                    cout<<"sobrevive "<<planeta2<<" con masa de "<<m2;
-                }
-            case 2:
-                cout<<"colisionan "<<planeta1<<" y "<<planeta2;
-
-                if(m3 > m4){
-                    m3 += (m2/2);
-                    d1 *= 2;
-                    cout<<"sobrevive "<<planeta1<<" con masa de "<<m1;
-                } else {
-                    m2 += (m1/2);
-                    d2 *= 2;
-                    cout<<"sobrevive "<<planeta2<<" con masa de "<<m2;
-                }
-        }
- */
