@@ -17,4 +17,4 @@ add_executable(tarea progra-II/teo-1/s6/tarea/tarea3.cpp)
 
 add_executable(semana7 progra-II/lab-102/s7/main.cpp progra-II/lab-102/s7/funciones.cpp progra-II/lab-102/s7/funciones.h )
 
-add_executable(s7 progra-II/lab-102/s7/codes1.cpp)
+add_executable(s7 progra-II/teo-1/s7/codes1.cpp)
