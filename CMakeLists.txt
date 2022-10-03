@@ -6,3 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(tarea progra-II/others/Mila/main.cpp)
 
 add_executable(test progra-II/teo-1/s7/test.cpp)
+
+add_executable(CTriangulo progra-II/lab-102/s8/CTriangulo.cpp progra-II/lab-102/s8/CTriangulo.h progra-II/lab-102/s8/main.cpp)
+
+add_executable(CCilindro progra-II/lab-102/s8/CCilindro.cpp progra-II/lab-102/s8/CCilindro.h progra-II/lab-102/s8/main2.cpp)

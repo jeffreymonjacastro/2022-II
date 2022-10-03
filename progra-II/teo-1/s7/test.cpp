@@ -16,7 +16,7 @@ int main(){
 
     double B[filas][columnas];
 
-    double B2[filas][columnas] = {};
+//    double B2[filas][columnas] = {};
 
 
 
