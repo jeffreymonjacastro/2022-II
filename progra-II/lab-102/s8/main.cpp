@@ -16,7 +16,7 @@ int main(){
     CTriangulo *t2;
     t2 = new CTriangulo(6, 8, 10);
 
-    cout<<"El perimetro es: "<<t2->cperimetro()<<endl;
+    cout<<"El perimetro es: "<<t2->perimetro()<<endl;
     cout<<"El area es: "<<t2->area()<<endl;
 
 
