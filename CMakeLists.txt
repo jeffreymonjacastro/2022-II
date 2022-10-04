@@ -7,10 +7,12 @@ add_executable(tarea progra-II/others/Mila/main.cpp)
 
 add_executable(test progra-II/teo-1/s7/test.cpp)
 
-add_executable(CTriangulo progra-II/lab-102/s8/CTriangulo.cpp progra-II/lab-102/s8/CTriangulo.h progra-II/lab-102/s8/main.cpp)
+add_executable(CTriangulo progra-II/lab-102/s8/Monday/CTriangulo.cpp progra-II/lab-102/s8/Monday/CTriangulo.h progra-II/lab-102/s8/Monday/main.cpp)
 
-add_executable(CCilindro progra-II/lab-102/s8/CCilindro.cpp progra-II/lab-102/s8/CCilindro.h progra-II/lab-102/s8/main2.cpp)
+add_executable(CCilindro progra-II/lab-102/s8/Monday/CCilindro.cpp progra-II/lab-102/s8/Monday/CCilindro.h progra-II/lab-102/s8/Monday/main2.cpp)
 
 add_executable(s8 progra-II/teo-1/s8/ejemplo1.cpp)
 
 add_executable(ejemplo2 progra-II/teo-1/s8/ejemplo2.cpp)
+
+add_executable(Nina progra-II/lab-102/s8/Tuesday/CAlumno.cpp progra-II/lab-102/s8/Tuesday/CAlumno.h progra-II/lab-102/s8/Tuesday/main1.cpp progra-II/lab-102/s8/Tuesday/CProfesor.cpp progra-II/lab-102/s8/Tuesday/CProfesor.h)
