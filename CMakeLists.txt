@@ -16,3 +16,5 @@ add_executable(s8 progra-II/teo-1/s8/ejemplo1.cpp)
 add_executable(ejemplo2 progra-II/teo-1/s8/ejemplo2.cpp)
 
 add_executable(Nina progra-II/lab-102/s8/Tuesday/CAlumno.cpp progra-II/lab-102/s8/Tuesday/CAlumno.h progra-II/lab-102/s8/Tuesday/main1.cpp progra-II/lab-102/s8/Tuesday/CProfesor.cpp progra-II/lab-102/s8/Tuesday/CProfesor.h)
+
+add_executable(Nina2 progra-II/lab-102/s8/Tuesday/CVector.cpp progra-II/lab-102/s8/Tuesday/CVector.h)
