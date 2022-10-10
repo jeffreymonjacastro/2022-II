@@ -4,7 +4,7 @@
 
 #include "CVector.h"
 
-CVector::CVector(entero tamanio, const int *elementos, entero maximo){
+TVector::TVector(entero tamanio, const int *elementos, entero maximo){
     this -> tamanio = tamanio;
     this -> elementos = ,
 
