@@ -11,7 +11,7 @@ typedef int* array_entero;
 class TVector {
 private:
     entero tamanio;
-    array_entero elementos;
+    TVector<double> *elementos;
     entero maximo;
     void redimensionar();
 public:

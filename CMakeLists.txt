@@ -19,7 +19,7 @@ add_executable(Nina progra-II/lab-102/s8/Tuesday/CAlumno.cpp progra-II/lab-102/s
 
 add_executable(Nina2 progra-II/lab-102/s8/Tuesday/CVector.cpp progra-II/lab-102/s8/Tuesday/CVector.h)
 
-add_executable(s9ninalunes progra-II/lab-102/s9/TVector.cpp progra-II/lab-102/s9/TVector.h progra-II/lab-102/s9/main.cpp)
+add_executable(s9ninalunes progra-II/lab-102/s9/TVector.h progra-II/lab-102/s9/main.cpp)
 
 add_executable(ejemplo001 progra-II/teo-1/s9/CPunto2D.cpp progra-II/teo-1/s9/CPunto2D.h progra-II/teo-1/s9/ejemplo001.cpp)
 
