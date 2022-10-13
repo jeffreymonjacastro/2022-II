@@ -30,7 +30,7 @@ float generarProbabilidad(){
 
 
 void Carrera(vector<int>ganadores,string* nombres,int * distanciaR,int* pasos,int* turnos_bloqueados){
-    while(ganadores.size()!=3){x
+    while(ganadores.size()!=3){
 
         for(int i=0;i<8;i++){
             if(ganadores.size() == 3){
