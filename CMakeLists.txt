@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(tarea progra-II/teo-1/s9/Tarea3/ejercicio4.cpp progra-II/teo-1/s9/Tarea3/CClave.cpp progra-II/teo-1/s9/Tarea3/CClave.h)
 
-add_executable(other progra-II/teo-1/s9/Tarea3/generadordellaves.cpp)
+add_executable(other progra-II/others/Practice/main.cpp progra-II/others/Practice/CRectangulo.cpp progra-II/others/Practice/CRectangulo.h progra-II/others/Practice/CFecha.cpp progra-II/others/Practice/CFecha.h progra-II/others/Practice/CTiempo.cpp progra-II/others/Practice/CTiempo.h)
 
