@@ -13,17 +13,33 @@ private:
     int **ppI = nullptr;
 
 public:
+    // Constructores
     Image();
     Image(int _width, int _height, int **_ppI);
 
     virtual ~Image();
 
+    // Métodos
     void generarMatriz();
+
+    void imprimirMatriz();
 
     void girarHorario();
 
     void girarAntihorario();
 
+    // Getters and Setters
+    int getWidth() const;
+
+    void setWidth(int width);
+
+    int getHeight() const;
+
+    void setHeight(int height);
+
+    int **getPpI() const;
+
+    void setPpI(int **ppI);
 };
 
 

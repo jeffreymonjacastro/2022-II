@@ -21,9 +21,20 @@ int main(){
     I1.generarMatriz();
     I2.generarMatriz();
 
+    cout<<endl;
+    I1.imprimirMatriz();
+    cout<<endl;
+    I2.imprimirMatriz();
+    cout<<endl;
+
     I1.girarHorario();
     I2.girarAntihorario();
 
+    cout<<"Giro horario: "<<endl;
+    I1.imprimirMatriz();
+    cout<<"Giro antihorario: "<<endl;
+    I2.imprimirMatriz();
+    cout<<endl;
 
     return 0;
 }
