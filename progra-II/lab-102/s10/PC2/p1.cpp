@@ -55,12 +55,11 @@ void imprimirMatriz(int** M, int tamanio){
     }
 }
 
-
 void liberarMatriz(int** M, int tamanio){
     for(int i = 0; i <tamanio; i++) {
         delete[] M[i];
-        delete[] M;
     }
+    delete[] M;
 }
 
 int main(){
