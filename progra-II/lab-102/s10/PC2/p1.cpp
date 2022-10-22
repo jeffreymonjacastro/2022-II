@@ -60,6 +60,7 @@ void liberarMatriz(int** M, int tamanio){
         delete[] M[i];
     }
     delete[] M;
+    M = nullptr;
 }
 
 int main(){

@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(tarea progra-II/teo-1/s9/Tarea3/ejercicio4.cpp progra-II/teo-1/s9/Tarea3/CClave.cpp progra-II/teo-1/s9/Tarea3/CClave.h)
 
-add_executable(mila progra-II/others/Mila/pc2mila.cpp)
+add_executable(mila progra-II/others/Mila/Illegal/p2.cpp)
 
 add_executable(testmila progra-II/others/Mila/test.cpp)
 
