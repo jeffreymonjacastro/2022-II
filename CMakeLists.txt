@@ -7,6 +7,8 @@ add_executable(tarea progra-II/teo-1/s9/Tarea3/ejercicio4.cpp progra-II/teo-1/s9
 
 add_executable(mila progra-II/others/Mila/Illegal/p2.cpp)
 
+add_executable(valery progra-II/others/Valery/PC2/p3.py.cpp)
+
 add_executable(testmila progra-II/others/Mila/test.cpp)
 
 add_executable(other progra-II/others/Practice/main.cpp progra-II/others/Practice/CRectangulo.cpp progra-II/others/Practice/CRectangulo.h progra-II/others/Practice/CFecha.cpp progra-II/others/Practice/CFecha.h progra-II/others/Practice/CTiempo.cpp progra-II/others/Practice/CTiempo.h)
