@@ -18,3 +18,5 @@ add_executable(nina10 progra-II/lab-102/s10/ejemplo3.cpp progra-II/lab-102/s10/G
 add_executable(pc2p1 progra-II/lab-102/s10/PC2/p1.cpp)
 add_executable(pc2p2 progra-II/lab-102/s10/PC2/p2.cpp)
 add_executable(pc2p3 progra-II/lab-102/s10/PC2/p3.cpp progra-II/lab-102/s10/PC2/imagen.cpp progra-II/lab-102/s10/PC2/imagen.h)
+
+add_executable(s11fiestas progra-II/teo-1/s11/ejemplo002.cpp progra-II/teo-1/s11/familia.h progra-II/teo-1/s11/padre.h progra-II/teo-1/s11/madre.h progra-II/teo-1/s11/hijo.h)
