@@ -3,9 +3,15 @@ project(2022_II)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_executable(ejercicio5 progra-II/teo-1/s11/Ejercicio5/ejercicio5.cpp)
+
 add_executable(tarea progra-II/others/quiz4.cpp)
 
 add_executable(mila progra-II/others/Mila/Illegal/p2.cpp)
+
+add_executable(fiestas10 progra-II/teo-1/s10/ejemplo02_agregacion.cpp progra-II/teo-1/s10/Universidad.h progra-II/teo-1/s10/Alumno.h progra-II/teo-1/s10/Clase.h)
+
+add_executable(composicion progra-II/teo-1/s10/ejemplo03_composicion.cpp progra-II/teo-1/s10/Evento.h progra-II/teo-1/s10/Fecha.h progra-II/teo-1/s10/Hora.h)
 
 add_executable(valery progra-II/others/Valery/PC2/p3.py.cpp)
 

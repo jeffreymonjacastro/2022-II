@@ -79,7 +79,7 @@ void e3(){
     }
 }
 
-// Ejercicio 5
+// Ejercicio5
 void e5(){
     int i=0, personas;
     double  m_i=0, f_i=0, v_i=0;
