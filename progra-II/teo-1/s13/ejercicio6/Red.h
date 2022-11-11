@@ -2,6 +2,7 @@
 #define P2_CPP_RED_H
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -18,82 +19,102 @@ public:
     virtual ~Red(){}
 
     //getters y setters
+    void setNombre(string n){nombre = n;}
 
-    // Métodos Polimorfismo
-    virtual void datos(){
+    void setTiempo(int t){tiempo = t;}
+
+    string getNombre(){return nombre;}
+
+    int getTiempo(){return tiempo;}
+
+    // Métodos
+    void datos(){
         cout<<"Procesador: "<<nombre<<", tiempo de instruccion: "<<tiempo<<endl;
     }
+
+    // Métodos Polimorfismo
+    virtual void activacion(bool _activo){}
+    virtual bool getActivo(){}
 };
 
 class x86: public Red{
+    bool activo;
 public:
     // Constructores
-    x86(){}
-    x86(string n, int t): Red(n,t){}
+    x86(): activo(false){}
+    x86(string n, int t, bool a): Red(n,t), activo(a){}
 
     // Destructor
     virtual ~x86(){}
 
     //getters y setters
+    bool getActivo(){return activo;}
 
-    // Métodos Polimorfismo
-    void datos(){
-        Red::datos();
+    // Métodos Polimorfismo{
+    void activacion(bool _activo){
+        activo = _activo;
     }
 };
 
 
 class ARM: public Red{
+    bool activo;
 public:
     // Constructores
-    ARM(){}
-    ARM(string n, int t): Red(n,t){}
+    ARM(): activo(false){}
+    ARM(string n, int t, bool a): Red(n,t), activo(a){}
 
     // Destructor
     virtual ~ARM(){}
 
     //getters y setters
+    bool getActivo(){return activo;}
 
-    // Métodos Polimorfismo
-    void datos(){
-        Red::datos();
+    // Métodos Polimorfismo{
+    void activacion(bool _activo){
+        activo = _activo;
     }
 };
 
 
 class MIPS: public Red{
+    bool activo;
 public:
     // Constructores
-    MIPS(){}
-    MIPS(string n, int t): Red(n,t){}
+    MIPS(): activo(false){}
+    MIPS(string n, int t, bool a): Red(n,t), activo(a){}
 
     // Destructor
     virtual ~MIPS(){}
 
     //getters y setters
+    bool getActivo(){return activo;}
 
-    // Métodos Polimorfismo
-    void datos(){
-        Red::datos();
+    // Métodos Polimorfismo{
+    void activacion(bool _activo){
+        activo = _activo;
     }
 };
 
 
 class SPARC: public Red{
+    bool activo;
 public:
     // Constructores
-    SPARC(){}
-    SPARC(string n, int t): Red(n,t){}
+    SPARC(): activo(false){}
+    SPARC(string n, int t, bool a): Red(n,t), activo(a){}
 
     // Destructor
     virtual ~SPARC(){}
 
     //getters y setters
+    bool getActivo(){return activo;}
 
-    // Métodos Polimorfismo
-    void datos(){
-        Red::datos();
+    // Métodos Polimorfismo{
+    void activacion(bool _activo){
+        activo = _activo;
     }
 };
+
 
 #endif //P2_CPP_RED_H
