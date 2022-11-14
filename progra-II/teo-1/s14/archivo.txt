@@ -1,0 +1,16 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+// >> operador de extraccion (right shift)
+// << operador de insercion (left shift)
+// fstream (entrada y salida), ofstream (salida), ifstream (entrada)
+int main() {
+    string x,y,z;
+    ifstream archivoEntrada; // lectura, objeto de clase ifstream
+    ofstream archivoSalida; // escritura, objeto de clase ofstream
+
+
+    // detectar si falla al abrir un archivo
+
+
+}
