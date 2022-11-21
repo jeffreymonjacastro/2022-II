@@ -8,3 +8,5 @@ add_executable(ejercicio6 progra-II/teo-1/s13/ejercicio6/procesadores.cpp progra
 add_executable(Alessssssss progra-II/others/Mila/codessss.cpp)
 
 add_executable(Ales_project proyecto_banco/main.cpp proyecto_banco/Cliente.h proyecto_banco/Cuentas.h proyecto_banco/Tarjetas.h)
+
+add_executable(nina15 progra-II/lab-102/s15/ejemplo1.cpp progra-II/lab-102/s15/Body.h progra-II/lab-102/s15/Sensor.h progra-II/lab-102/s15/Actuator.h progra-II/lab-102/s15/Enviroment.h progra-II/lab-102/s15/Lake.h progra-II/lab-102/s15/Sea.h progra-II/lab-102/s15/Type.h progra-II/lab-102/s15/Vision.h)
