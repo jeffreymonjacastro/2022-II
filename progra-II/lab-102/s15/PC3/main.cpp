@@ -43,7 +43,7 @@ int main(){
     }
 
     cout<<root;
-    cout<<root
+    root.list();
 
     return 0;
 }
