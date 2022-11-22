@@ -15,7 +15,14 @@ public:
         this->entries.push_back(e);
     }
 
-    string list(){}
+    string list(){
+        string text = "";
+        for (int i = 0; i < entries.size(); ++i) {
+            text += entries[i]->get_read() + entries[i]->get_write()+ entries[i]->get_execute() + "\n";
+        }
+
+        return text;
+    }
 
     int get_size(){return 0;}
 
