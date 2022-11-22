@@ -14,7 +14,6 @@ int main(){
     rov+S;
     rov+brazo;
 
-    cout<<rov.
 
     return 0;
 }
