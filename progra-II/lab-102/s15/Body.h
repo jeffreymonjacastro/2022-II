@@ -16,11 +16,11 @@ private:
     s filename;
     ofstream file;
     vector<Sensor> *vSensor;
-    vector<Actuator> vActuator;
+    vector<Actuator*> vActuator;
 
 public:
     // Consturctor del Body
-    Body(vector<Actuator> vActuator, s filename){
+    Body(vector<Actuator*> vActuator, s filename){
         // Recibe un vector desde afuera y se le asigna al atributo (agregación)
         this->vActuator = vActuator;
 
@@ -34,13 +34,13 @@ public:
         this->vSensor->push_back(S);
     }
 
-    void operator+(Actuator A){
+    void operator+(Actuator* A){
         this->vActuator.push_back(A);
     }
 
     vector<Sensor>* getvSensor(){return vSensor;}
 
-    vector<Actuator> getvActuator(){return vActuator;}
+    vector<Actuator> getvActuator(){return vActuator*;}
 
     void start_body(){}
     void stop_body(){}

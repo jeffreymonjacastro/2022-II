@@ -4,9 +4,9 @@
 #include "Type.h"
 
 int main(){
-    vector<Actuator> vActuator;
+    vector<Actuator*> vActuator;
 
-    Actuator brazo("Bracito");
+    auto* brazo = new Actuator("Bracito");
     Sensor S("Sensorcito");
 
     Body rov(vActuator, "log.txt");
