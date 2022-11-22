@@ -10,3 +10,5 @@ add_executable(Alessssssss proyecto_banco/codessss.cpp)
 add_executable(Ales_project proyecto_banco/main.cpp proyecto_banco/Cliente.h proyecto_banco/Cuentas.h proyecto_banco/Tarjetas.h)
 
 add_executable(nina15 progra-II/lab-102/s15/ejemplo1.cpp progra-II/lab-102/s15/Body.h progra-II/lab-102/s15/Sensor.h progra-II/lab-102/s15/Actuator.h progra-II/lab-102/s15/Enviroment.h progra-II/lab-102/s15/Lake.h progra-II/lab-102/s15/Sea.h progra-II/lab-102/s15/Type.h progra-II/lab-102/s15/Vision.h)
+
+add_executable(PC3 progra-II/lab-102/s15/PC3/main.cpp progra-II/lab-102/s15/PC3/Entry.h progra-II/lab-102/s15/PC3/File.h progra-II/lab-102/s15/PC3/Folder.h)
