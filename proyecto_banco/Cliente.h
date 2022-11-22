@@ -21,16 +21,19 @@ public:
 
     virtual ~Cliente(){}
 
-    // Método de asociación
     // Al vector de cuentas de ahorro del cliente se le agrega una tarjeta de debito
-    void asociarCuentaAhorro(CuentadeAhorro* debito){
-        cuentas_ahorro.push_back(debito);
+    // Sobrecarga del operador para agregar una nueva Cuenta de Ahorro
+    void operator+(CuentadeAhorro* debito){
+        this->cuentas_ahorro.push_back(debito);
     }
 
     // Al vector de cuentas de credito del cliente se le agrega una tarjeta de credito
     void asociarCuentaCredito(CuentadeCredito* credito){
         cuentas_credito.push_back(credito);
     }
+
+
+
 
     string getNombre(){return nombre;}
 };
