@@ -22,20 +22,18 @@ int** sumar_cruz(int** M, int n){
                     Mcruz[i][j] = M[i][j] + M[i-1][j] + M[i][j+1];
                 else if (j == n-1)
                     Mcruz[i][j] = M[i][j] + M[i-1][j] + M[i][j-1];
+                else
+                    Mcruz[i][j] = M[i][j] + M[i-1][j] + M[i][j-1] + M[i][j+1];
+            } else if (i > 0 && i < n-1) {
+                if (j == 0)
+                    Mcruz[i][j] = M[i][j] + M[i][j + 1] + M[i - 1][j] + M[i + 1][j];
+                else if (j == n-1)
+                    Mcruz[i][j] = M[i][j] + M[i][j - 1] + M[i - 1][j] + M[i + 1][j];
+                else
+                    Mcruz[i][j] = M[i][j] + M[i-1][j] + M[i+1][j] + M[i][j-1] + M[i][j+1];
             }
-
-
-            if (i == 0 && j == 0)
-                Mcruz[i][j] = M[i][j] + M[i+1][j] + M[i][j+1];
-            else if (i == 0 && j == n-1)
-                Mcruz[i][j] = M[i][j] + M[i+1][j] + M[i][j-1];
-            else if (i == n-1 && j == 0)
-                Mcruz[i][j] = M[i][j] + M[i-1][j] + M[i][j+1];
-            else if (i == n-1 && j == n-1)
-                Mcruz[i][j] = M[i][j] + M[i-1][j] + M[i][j-1];
         }
     }
-    
 
     return Mcruz;
 }
