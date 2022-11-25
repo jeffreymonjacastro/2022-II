@@ -16,6 +16,12 @@ private:
     vector<CuentadeAhorro*> cuentas_destino;
 public:
     CuentadeAhorro(){}
+
+    // Constructor para hacer una composición con la tarjeta de débito
+    CuentadeAhorro(long long int b, string f){
+        tarjeta = new TarjetadeDebito(b, f);
+    }
+
     CuentadeAhorro(string d, double m, string f){
         descripcion.push_back(d);
         montos.push_back(m);

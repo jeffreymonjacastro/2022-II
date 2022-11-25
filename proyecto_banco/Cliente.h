@@ -13,7 +13,7 @@ private:
     string nombre;
     string apellido;
     int edad;
-    double dni;
+    long int dni;
     vector<CuentadeAhorro*> cuentas_ahorro;
     vector<CuentadeCredito*> cuentas_credito;
 public:

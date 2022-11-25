@@ -7,11 +7,11 @@ using namespace std;
 
 class TarjetadeDebito {
 private:
-    double BIN;
+    long long int BIN;
     string fecha_caducidad;
 public:
     TarjetadeDebito(){}
-    TarjetadeDebito(double b, string e, string f):BIN(b), fecha_caducidad(f){}
+    TarjetadeDebito(long long int b, string f):BIN(b), fecha_caducidad(f){}
 
     virtual ~TarjetadeDebito(){}
 };
