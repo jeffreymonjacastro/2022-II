@@ -14,9 +14,10 @@ int main(){
         cout << "MENU" << endl;
         cout << "1. Lista de clientes" << endl;
         cout << "2. Cuentas de Ahorro" << endl;
-        cout << "3. Salir del banco"<<endl;
+        cout << "3. Cuentas de Crédito" << endl;
+        cout << "4. Salir del banco"<<endl;
 
-        int option = seleccionar_opcion(3);
+        int option = seleccionar_opcion(4);
 
         cout << endl;
 
@@ -38,7 +39,61 @@ int main(){
                 cout << endl;
 
                 if (suboption == 1) {
-                    cout << "BUSCAR CLIENTES" << endl;
+                    while(true) {
+                        cout << "BUSCAR CLIENTES" << endl;
+
+                        cout<<"Ingrese el nombre del cliente que desea eliminar:"<<endl;
+                        string name; cin>>name;
+
+                        for (int i = 0; i < clientes.size(); ++i) {
+                            if(name == clientes[i].getNombre()){
+                                cout<<"Cliente: "<<clientes[i].getNombre()<<" "<<clientes[i].getApellido()<<endl;
+                                cout<<"Edad: "<<clientes[i].getEdad()<<endl;
+                                cout<<"DNI: "<<clientes[i].getDni()<<endl;
+
+                                cout<<"Cuentas de Ahorro asociadas: "<<endl;
+
+                                if (clientes[i].getCuentasAhorro().empty()) {
+                                    cout << "El cliente no tiene cuentas de ahorro asociadas" << endl;
+                                } else {
+                                    for (int j = 0; j < clientes[i].getCuentasAhorro().size(); ++i) {
+                                        cout<<"Cuenta de Ahorro "<<j+1<<":"<<endl;
+                                        cout<<"Tarjeta de debito: "<<endl;
+                                        cout<<"BIN: "<<clientes[i].getCuentasAhorro()[j]->getTarjeta()->getBin()<<endl;
+                                        cout<<"Fecha de caducidad: "<<clientes[i].getCuentasAhorro()[j]->getTarjeta()->getFechaCaducidad()<<endl;
+                                    }
+                                }
+
+                                cout<<"Cuentas de Credito asociadas: "<<endl;
+
+                                if (clientes[i].getCuentasCredito().empty()) {
+                                    cout << "El cliente no tiene cuentas de credito asociadas" << endl;
+                                } else {
+                                    for (int j = 0; j < clientes[i].getCuentasCredito().size(); ++i) {
+                                        cout<<"Cuenta de Credito "<<j+1<<":"<<endl;
+                                        cout<<"Tarjeta de credito: "<<endl;
+                                        cout<<"BIN: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getBin()<<endl;
+                                        cout<<"Fecha de caducidad: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaCaducidad()<<endl;
+                                        cout<<"Monto Limite: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getMontoLimite()<<endl;
+                                        cout<<"Fecha de corte: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaCorte()<<endl;
+                                        cout<<"Fecha de pago: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaPago()<<endl;
+                                    }
+                                }
+
+                            } else
+                                cout<<"No se encontró al cliente"<<endl;
+                        }
+
+                        cout << "Desea buscar a otro cliente? [T o F]" << endl;
+                        char tof; cin >> tof;
+
+                        if (tof == 'F') {
+                            cout << "Regresando a la Lista de Clientes..." << endl;
+                            break;
+                        }
+                    }
+
+
                 } else if (suboption == 2) {
                     while (true) {
                         cout << "AGREGAR CLIENTES" << endl;
@@ -76,9 +131,8 @@ int main(){
                         cout << "Cliente agregado satisfactoriamente" << endl;
                         cout<<endl;
 
-                        char tof;
                         cout << "Desea agregar otro cliente? [T o F]" << endl;
-                        cin >> tof;
+                        char tof; cin >> tof;
 
                         if (tof == 'F') {
                             cout << "Regresando a la Lista de Clientes..." << endl;
@@ -100,14 +154,13 @@ int main(){
                         for (int i = 0; i < clientes.size(); ++i) {
                             if(name == clientes[i].getNombre()){
                                 clientes.erase(clientes.begin()+i);
-                            }
+                                cout<<"Cliente eliminado"<<endl;
+                            } else
+                                cout<<"No se encontró al cliente"<<endl;
                         }
 
-                        cout<<"Cliente eliminado"<<endl;
-
-                        char tof;
                         cout << "Desea eliminar otro cliente? [T o F]" << endl;
-                        cin >> tof;
+                        char tof; cin >> tof;
 
                         if (tof == 'F') {
                             cout << "Regresando a la Lista de Clientes..." << endl;
@@ -126,6 +179,8 @@ int main(){
         } else if (option == 2) {
             cout << "CUENTAS DE AHORRO" << endl;
         } else if (option == 3) {
+            cout << "CUENTAS DE CREDITO" << endl;
+        } else if (option == 4) {
             cout<<"Hasta pronto"<<endl;
             break;
         }

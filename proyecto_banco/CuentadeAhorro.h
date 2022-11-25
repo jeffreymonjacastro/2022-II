@@ -22,18 +22,17 @@ public:
         tarjeta = new TarjetadeDebito(b, f);
     }
 
-    CuentadeAhorro(string d, double m, string f){
-        descripcion.push_back(d);
-        montos.push_back(m);
-        fechas.push_back(f);
-    }
+    // Historial
+//    CuentadeAhorro(string d, double m, string f){
+//        descripcion.push_back(d);
+//        montos.push_back(m);
+//        fechas.push_back(f);
+//    }
 
     virtual ~CuentadeAhorro(){}
 
-    // Método de asociación
-    void asociarTarjeta(TarjetadeDebito* t) {
-        tarjeta = t;
-    }
+    // Métodos
+    TarjetadeDebito* getTarjeta(){return tarjeta;}
 };
 
 #endif //P2_CPP_CUENTADEAHORRO_H

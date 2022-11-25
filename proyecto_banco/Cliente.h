@@ -38,7 +38,19 @@ public:
         cout<<nombre<<setw(15)<<apellido<<setw(15)<<edad<<setw(15)<<dni<<endl;
     }
 
+    // Getters
     string getNombre(){return nombre;}
+
+    string getApellido(){return apellido;}
+
+    int getEdad(){return edad;}
+
+    long getDni(){return dni;}
+
+    vector<CuentadeAhorro*> getCuentasAhorro(){return cuentas_ahorro;}
+
+    vector<CuentadeCredito*> getCuentasCredito(){return cuentas_credito;}
+
 };
 
 

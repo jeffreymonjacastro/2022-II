@@ -17,6 +17,17 @@ public:
     TarjetadeCredito(long int b, string f, double ml, string fc, string fp):BIN(b), fecha_caducidad(f), monto_limite(ml), fecha_corte(fc), fecha_pago(fp){}
 
     virtual ~TarjetadeCredito(){}
+
+    // Getters
+    long int getBin(){return BIN;}
+
+    string getFechaCaducidad(){return fecha_caducidad;}
+
+    double getMontoLimite(){return monto_limite;}
+
+    string getFechaCorte(){return fecha_corte;}
+
+    string getFechaPago(){return fecha_pago;}
 };
 
 

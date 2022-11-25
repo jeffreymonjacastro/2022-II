@@ -23,18 +23,16 @@ public:
     }
 
     // Historial de movimientos
-    CuentadeCredito(string d, double m, string f){
-        descripcion.push_back(d);
-        montos.push_back(m);
-        fechas.push_back(f);
-    }
+//    CuentadeCredito(string d, double m, string f){
+//        descripcion.push_back(d);
+//        montos.push_back(m);
+//        fechas.push_back(f);
+//    }
 
     virtual ~CuentadeCredito(){}
 
-    // Método de asociación
-    void asociarTarjeta(TarjetadeCredito* t){
-        tarjeta = t;
-    }
+    // Métodos
+    TarjetadeCredito* getTarjeta(){return tarjeta;}
 };
 
 #endif //P2_CPP_CUENTADECREDITO_H
