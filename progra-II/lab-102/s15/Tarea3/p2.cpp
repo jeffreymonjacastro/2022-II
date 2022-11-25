@@ -45,7 +45,8 @@ int main(){
 
         cout<<"\nProducto "<<i+1<<endl;
         cout<<"Nombre del producto:"<<endl;
-        cin>>name;
+        getline(cin,name);
+        getline(cin,name);
 
         cout<<"Moneda [S o D]:"<<endl;
         cin>>currency;
