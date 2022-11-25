@@ -19,7 +19,15 @@ private:
     vector<CuentadeCredito*> cuentas_credito;
 public:
     Cliente(){}
-    Cliente(string n, string a, int e, double d): nombre(n), apellido(a), edad(e), dni(d){};
+    Cliente(string n, string a, int e, double d): nombre(n), apellido(a), edad(e), dni(d){}
+    Cliente(const Cliente &cliente) {
+        this->nombre = cliente.nombre;
+        this->apellido = cliente.apellido;
+        this->edad = cliente.edad;
+        this->dni = cliente.dni;
+        this->cuentas_ahorro = cliente.cuentas_ahorro;
+        this->cuentas_credito = cliente.cuentas_credito;
+    }
 
     virtual ~Cliente(){}
 
@@ -50,7 +58,6 @@ public:
     vector<CuentadeAhorro*> getCuentasAhorro(){return cuentas_ahorro;}
 
     vector<CuentadeCredito*> getCuentasCredito(){return cuentas_credito;}
-
 };
 
 

@@ -33,4 +33,18 @@ void lista_de_clientes(vector<Cliente> &clients){
     }
 }
 
+void lista_cuentas_ahorro(vector<Cliente> &Ahorro){
+    if (Ahorro.empty()) {
+        cout << "El banco aun no tiene clientes asociados a cuentas de Ahorro" << endl;
+    } else {
+        cout<<setw(15)<<"Cliente"<<setw(15)<<"Tarjeta de debito"<<endl;
+
+        for (int i = 0; i < Ahorro.size(); ++i) {
+            for (int j = 0; j < Ahorro[i].getCuentasAhorro().size(); ++j) {
+                cout<<setw(15)<<Ahorro[i].getNombre()<<" "<<Ahorro[i].getApellido()<<setw(15)<<Ahorro[i].getCuentasAhorro()[j]->getTarjeta()<<endl;
+            }
+        }
+    }
+}
+
 #endif //P2_CPP_FUNCIONES_H
