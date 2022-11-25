@@ -18,7 +18,7 @@ public:
     CuentadeAhorro(){}
 
     // Constructor para hacer una composición con la tarjeta de débito
-    CuentadeAhorro(long long int b, string f){
+    CuentadeAhorro(long int b, string f){
         tarjeta = new TarjetadeDebito(b, f);
     }
 

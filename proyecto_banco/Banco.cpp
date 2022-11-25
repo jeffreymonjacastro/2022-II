@@ -3,7 +3,7 @@
 
 int main(){
     // Variables generales
-    vector<Cliente*> clientes;
+    vector<Cliente> clientes;
 
     cout<<setw(20)<<"Banco Trivial"<<endl;
     cout<<setw(18)<<"Bienvenido"<<endl;
@@ -64,10 +64,25 @@ int main(){
                     cout<<"Edad: "<<edad<<endl;
                     cout<<"DNI: "<<dni<<endl;
 
-                    cout<<"Agregando al cliente..."<<endl;
-                    auto cliente = new Cliente(nombre, apellido, edad, dni);
+                    Cliente cliente(nombre, apellido, edad, dni);
 
+                    char opcion_cuenta;
+                    cout<<"Asociar una Cuenta de Ahorro o de Credito? [A o C]"<<endl;
+                    cin>>opcion_cuenta;
+
+                    if (opcion_cuenta == 'A'){
+                        auto nueva_cuenta_ahorro = new CuentadeAhorro(123456,"12/24");
+                        cliente + nueva_cuenta_ahorro;
+                    } else if (opcion_cuenta == 'C'){
+                        auto nueva_cuenta_credito = new CuentadeCredito(123456, "12/25", 10000.0, "12/22", "01/23");
+                        cliente + nueva_cuenta_credito;
+                    }
+
+                    cout<<"Agregando al cliente..."<<endl;
                     clientes.push_back(cliente);
+
+                    cout<<"Cliente agregado satisfactoriamente. Regresando al menu"<<endl;
+                    cout<<endl;
 
                 } else if (suboption == 3) {
                     cout << "ELIMINAR CLIENTES" << endl;

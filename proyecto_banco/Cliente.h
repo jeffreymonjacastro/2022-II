@@ -28,6 +28,10 @@ public:
         this->cuentas_ahorro.push_back(debito);
     }
 
+    void operator+(CuentadeCredito* credito){
+        this->cuentas_credito.push_back(credito);
+    }
+
     // Al vector de cuentas de credito del cliente se le agrega una tarjeta de credito
     void asociarCuentaCredito(CuentadeCredito* credito){
         cuentas_credito.push_back(credito);
@@ -37,7 +41,9 @@ public:
 
 
     string getNombre(){return nombre;}
+
 };
+
 
 
 #endif //P2_CPP_CLIENTE_H
