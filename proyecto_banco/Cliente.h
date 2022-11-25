@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include <vector>
-#include "Cuentas.h"
+#include "CuentadeAhorro.h"
+#include "CuentadeCredito.h"
 
 using namespace std;
 

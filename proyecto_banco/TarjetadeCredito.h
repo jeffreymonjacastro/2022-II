@@ -1,20 +1,9 @@
-#ifndef P2_CPP_TARJETAS_H
-#define P2_CPP_TARJETAS_H
+#ifndef P2_CPP_TARJETADECREDITO_H
+#define P2_CPP_TARJETADECREDITO_H
 
 #include <iostream>
 
 using namespace std;
-
-class TarjetadeDebito {
-private:
-    double BIN;
-    string fecha_caducidad;
-public:
-    TarjetadeDebito(){}
-    TarjetadeDebito(double b, string e, string f):BIN(b), fecha_caducidad(f){}
-
-    virtual ~TarjetadeDebito(){}
-};
 
 class TarjetadeCredito {
 private:
@@ -31,4 +20,4 @@ public:
 };
 
 
-#endif //P2_CPP_TARJETAS_H
+#endif //P2_CPP_TARJETADECREDITO_H
