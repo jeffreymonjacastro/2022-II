@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iomanip>
 #include "Cliente.h"
 
 using namespace std;
@@ -24,8 +25,10 @@ void lista_de_clientes(vector<Cliente> &clients){
     if (clients.empty()) {
         cout << "El banco aun no tiene clientes" << endl;
     } else {
+        cout<<"Nombre"<<setw(15)<<"Apellido"<<setw(15)<<"Edad"<<setw(15)<<"DNI"<<endl;
+
         for (int i = 0; i < clients.size(); ++i) {
-            cout<<clients[i].getNombre()<<endl;
+            clients[i].getDatos();
         }
     }
 }

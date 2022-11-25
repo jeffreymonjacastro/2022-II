@@ -89,7 +89,34 @@ int main(){
                     cout<<endl;
 
                 } else if (suboption == 3) {
-                    cout << "ELIMINAR CLIENTES" << endl;
+                    while(true) {
+                        cout << "ELIMINAR CLIENTES" << endl;
+
+                        cout<<"Ingrese el nombre del cliente que desea eliminar:"<<endl;
+                        string name; cin>>name;
+
+                        cout<<"Buscando cliente..."<<endl;
+
+                        for (int i = 0; i < clientes.size(); ++i) {
+                            if(name == clientes[i].getNombre()){
+                                clientes.erase(clientes.begin()+i);
+                            }
+                        }
+
+                        cout<<"Cliente eliminado"<<endl;
+
+                        char tof;
+                        cout << "Desea eliminar otro cliente? [T o F]" << endl;
+                        cin >> tof;
+
+                        if (tof == 'F') {
+                            cout << "Regresando a la Lista de Clientes..." << endl;
+                            break;
+                        }
+                    }
+
+                    cout<<endl;
+
                 } else if (suboption == 4) {
                     cout << "Regresando al menu..." << endl;
                     cout<<endl;

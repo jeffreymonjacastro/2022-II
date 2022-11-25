@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iomanip>
 #include "CuentadeAhorro.h"
 #include "CuentadeCredito.h"
 
@@ -32,16 +33,12 @@ public:
         this->cuentas_credito.push_back(credito);
     }
 
-    // Al vector de cuentas de credito del cliente se le agrega una tarjeta de credito
-    void asociarCuentaCredito(CuentadeCredito* credito){
-        cuentas_credito.push_back(credito);
+    // Imprimir los datos de los clientes
+    void getDatos(){
+        cout<<nombre<<setw(15)<<apellido<<setw(15)<<edad<<setw(15)<<dni<<endl;
     }
 
-
-
-
     string getNombre(){return nombre;}
-
 };
 
 
