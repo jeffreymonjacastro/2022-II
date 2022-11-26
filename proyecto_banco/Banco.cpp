@@ -161,14 +161,22 @@ int main(){
                         cin >> opcion_cuenta;
 
                         if (opcion_cuenta == 'A') {
-                            auto nueva_cuenta_ahorro = new CuentadeAhorro(123456, "12/24");
+                            auto nueva_cuenta_ahorro = crear_cuenta_ahorro();
+
+                            cout<<"Se asocia la tarjeta de debito con bin: "<<nueva_cuenta_ahorro->getTarjeta()->getBin()<<" y fecha de caducidad: "<<nueva_cuenta_ahorro->getTarjeta()->getFechaCaducidad()<<endl;
+
                             cliente + nueva_cuenta_ahorro;
                             cuentasAhorro.push_back(cliente);
                         } else if (opcion_cuenta == 'C') {
-                            auto nueva_cuenta_credito = new CuentadeCredito(123456, "12/25", 10000.0, "12/22", "01/23");
+                            auto nueva_cuenta_credito = crear_cuenta_credito();
+
+                            cout<<"Se asocia la tarjeta de credito con bin: "<<nueva_cuenta_credito->getTarjeta()->getBin()<<" y fecha de caducidad: "<<nueva_cuenta_credito->getTarjeta()->getFechaCaducidad()<<endl;
+
                             cliente + nueva_cuenta_credito;
                             cuentasCredito.push_back(cliente);
                         }
+
+                        cout<<endl;
 
                         cout << "Agregando al cliente..." << endl;
                         clientes.push_back(cliente);
@@ -232,11 +240,15 @@ int main(){
             cout << "CUENTAS DE AHORRO" << endl;
 
             lista_cuentas_ahorro(cuentasAhorro);
+
+
         }
 
         // Opción 3: Cuentas de crédito
         else if (option == 3) {
             cout << "CUENTAS DE CREDITO" << endl;
+
+            lista_cuentas_credito(cuentasCredito);
         }
 
         // Opción 4: Cerrar el programa
