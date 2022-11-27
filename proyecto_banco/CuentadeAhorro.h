@@ -1,19 +1,15 @@
 #ifndef P2_CPP_CUENTADEAHORRO_H
 #define P2_CPP_CUENTADEAHORRO_H
 
-#include "TarjetadeDebito.h"
+#include "Servicios.h"
 #include <vector>
 #include <iostream>
 
 using namespace std;
 
-class CuentadeAhorro {
+class CuentadeAhorro: public Servicios {
 private:
-    TarjetadeDebito* tarjeta; //Asociacion
-    vector<string> descripcion;
-    vector<double> montos;
-    vector<string> fechas;
-    vector<CuentadeAhorro*> cuentas_destino;
+
 public:
     CuentadeAhorro(){}
 
@@ -33,7 +29,7 @@ public:
     virtual ~CuentadeAhorro(){}
 
     // Métodos
-    TarjetadeDebito* getTarjeta(){return tarjeta;}
+    Tarjeta* getTarjeta(){return tarjeta;}
 };
 
 #endif //P2_CPP_CUENTADEAHORRO_H

@@ -9,7 +9,7 @@ using namespace std;
 
 class CuentadeCredito {
 private:
-    TarjetadeCredito* tarjeta; //Asociacion
+    Tarjeta* tarjeta; //Asociacion
     vector<string> descripcion;
     vector<double> montos;
     vector<string> fechas;
@@ -33,7 +33,7 @@ public:
     virtual ~CuentadeCredito(){}
 
     // Métodos
-    TarjetadeCredito* getTarjeta(){return tarjeta;}
+    Tarjeta* getTarjeta(){return tarjeta;}
 };
 
 #endif //P2_CPP_CUENTADECREDITO_H
