@@ -22,6 +22,7 @@ public:
         tarjeta = new TarjetadeCredito(b, f, ml, fc, fp);
     }
 
+    // Métodos
     // Historial de movimientos
 //    CuentadeCredito(string d, double m, string f){
 //        descripcion.push_back(d);

@@ -32,17 +32,20 @@ public:
 
 class CPoligono {
 private:
-    tentero lados;
+    int lados;
     vector<CPunto*> puntos;
 public:
     CPoligono(){}
-    CPoligono(vector<CPunto*> &points){
-        this->puntos = points;
-
-        this->lados = points.size();
+    CPoligono(int l):lados(l){
+        vector<CPunto*> p;
+        puntos = p;
     }
 
     virtual ~CPoligono(){}
+
+    void operator+(CPunto* p){
+        puntos.push_back(p);
+    }
 
     tnum perimetro(){
         tnum sumaPerimetro = 0;
@@ -58,7 +61,29 @@ public:
 };
 
 int main(){
+    int n;
+    while(true) {
+        cout << "N: " << endl;
+        cin >> n;
 
+        if (n>=3)
+            break;
+    }
+
+    CPoligono polygon1(n);
+
+    double x, y;
+    for (int i = 0; i < n; ++i) {
+        cout<<"x, y"<<endl;
+        cin>>x>>y;
+
+        auto n_punto = new CPunto(x, y);
+
+        polygon1+n_punto;
+    }
+
+    cout<<"Perimetro: "<<polygon1.perimetro()<<endl;
+    cout<<"Lados: "<<polygon1.getLados()<<endl;
 
     return 0;
 }
