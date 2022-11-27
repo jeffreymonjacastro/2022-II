@@ -7,9 +7,8 @@
 
 using namespace std;
 
-class CuentadeCredito {
+class CuentadeCredito: public Servicios{
 private:
-    Tarjeta* tarjeta; //Asociacion
     vector<string> descripcion;
     vector<double> montos;
     vector<string> fechas;

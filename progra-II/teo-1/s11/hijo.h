@@ -1,6 +1,9 @@
 #ifndef P2_CPP_HIJO_H
 #define P2_CPP_HIJO_H
 
+#include <iostream>
+#include "familia.h"
+using namespace std;
 // clase Hijo derivada de Familia
 
 class Hijo: public Familia{

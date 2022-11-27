@@ -2,6 +2,7 @@
 #define P2_CPP_CUENTADEAHORRO_H
 
 #include "Servicios.h"
+#include "TarjetadeDebito.h"
 #include <vector>
 #include <iostream>
 
@@ -9,7 +10,10 @@ using namespace std;
 
 class CuentadeAhorro: public Servicios {
 private:
-
+    vector<string> descripcion;
+    vector<double> montos;
+    vector<string> fechas;
+    vector<Servicios*> cuentas_destino;
 public:
     CuentadeAhorro(){}
 
