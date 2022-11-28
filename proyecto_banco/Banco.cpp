@@ -211,7 +211,7 @@ void Banco::Menu() {
         else if (option == 2) {
             cout << "CUENTAS DE AHORRO" << endl;
 
-            lista_cuentas_ahorro(cuentasAhorro);
+            lista_cuentas_ahorro(clientes);
 
             // Buscar el cliente
 
@@ -222,7 +222,7 @@ void Banco::Menu() {
         else if (option == 3) {
             cout << "CUENTAS DE CREDITO" << endl;
 
-            lista_cuentas_credito(cuentasCredito);
+            lista_cuentas_credito(clientes);
 
             // Buscar el cliente
 

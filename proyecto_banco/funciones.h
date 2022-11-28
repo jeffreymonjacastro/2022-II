@@ -97,8 +97,11 @@ void lista_cuentas_credito(vector<Cliente> &Credito){
         cout<<setw(5)<<"Cliente"<<setw(25)<<"Tarjeta de credito"<<endl;
 
         for (auto & cliente : Credito) {
-            for (int j = 0; j < i.getCuentasCredito().size(); ++j) {
-                cout<<i.getNombre()<<" "<<i.getApellido()<<setw(15)<<i.getCuentasCredito()[j]->getTarjeta()->getBin()<<endl;
+            for (int j = 0; j < cliente.getServicios().size(); ++j) {
+                if(cliente.getServicios()[j]->getTipoServicio() == "credito") {
+                    cout << cliente.getNombre() << " " << cliente.getApellido() << setw(15)
+                         << cliente.getServicios()[j]->getBIN() << endl;
+                }
             }
         }
     }
