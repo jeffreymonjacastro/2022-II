@@ -2,7 +2,7 @@
 #include "funciones.h"
 
 void Banco::Menu() {
-    cout<<setw(20)<<"Banco Trivial"<<endl;
+    cout<<setw(20)<<"MiBanco"<<endl;
     cout<<setw(18)<<"Bienvenido"<<endl;
     cout<<"============================"<<endl;
 
@@ -311,7 +311,7 @@ void Banco::Menu() {
                     }
                 }
 
-                    // Opción 2: Regresar al menú
+                // Opción 2: Regresar al menú
                 else if(suboption == 2){
                     cout << "Regresando al menu..." << endl;
                     cout<<endl;
