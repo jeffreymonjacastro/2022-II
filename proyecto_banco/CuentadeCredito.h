@@ -8,11 +8,6 @@
 using namespace std;
 
 class CuentadeCredito: public Servicios{
-private:
-    vector<string> descripcion;
-    vector<double> montos;
-    vector<string> fechas;
-    vector<CuentadeCredito*> cuentas_destino;
 public:
     CuentadeCredito(){}
 
@@ -33,18 +28,14 @@ public:
         cout<<"Fecha de pago: "<<tarjeta_credito->getFechaPago()<<endl;
     }
 
-    // Métodos
-    // Historial de movimientos
-//    CuentadeCredito(string d, double m, string f){
-//        descripcion.push_back(d);
-//        montos.push_back(m);
-//        fechas.push_back(f);
-//    }
-
     virtual ~CuentadeCredito(){}
+
+    string getTipoServicio(){return tipo_servicio;}
 
     // Métodos
     TarjetadeCredito* getTarjeta(){return tarjeta_credito;}
+
+    long int getBIN(){return tarjeta_credito->getBin();}
 };
 
 #endif //P2_CPP_CUENTADECREDITO_H

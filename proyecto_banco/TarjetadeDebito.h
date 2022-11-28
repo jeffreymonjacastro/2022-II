@@ -2,7 +2,6 @@
 #define P2_CPP_TARJETADEDEBITO_H
 
 #include <iostream>
-#include "Tarjeta.h"
 
 using namespace std;
 

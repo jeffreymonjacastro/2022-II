@@ -19,6 +19,9 @@ public:
 
     virtual void getDatos() = 0;
 
+    virtual string getTipoServicio() = 0;
+
+    virtual long int getBIN() = 0;
 };
 
 #endif //P2_CPP_SERVICIOS_H

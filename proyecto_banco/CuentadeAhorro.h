@@ -9,11 +9,6 @@
 using namespace std;
 
 class CuentadeAhorro: public Servicios {
-private:
-    vector<string> descripcion;
-    vector<double> montos;
-    vector<string> fechas;
-    vector<Servicios*> cuentas_destino;
 public:
     CuentadeAhorro(){}
 
@@ -31,18 +26,14 @@ public:
         cout<<"Fecha de caducidad: "<<tarjeta_debito->getFechaCaducidad()<<endl;
     }
 
-    // Métodos
-    // Historial
-//    CuentadeAhorro(string d, double m, string f){
-//        descripcion.push_back(d);
-//        montos.push_back(m);
-//        fechas.push_back(f);
-//    }
-
     virtual ~CuentadeAhorro(){}
+
+    string getTipoServicio(){return tipo_servicio;}
 
     // Métodos
     TarjetadeDebito* getTarjeta(){return tarjeta_debito;}
+
+    long int getBIN(){return tarjeta_debito->getBin();}
 };
 
 #endif //P2_CPP_CUENTADEAHORRO_H

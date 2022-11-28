@@ -79,7 +79,10 @@ void lista_cuentas_ahorro(vector<Cliente> &Ahorro){
 
         for (auto & cliente : Ahorro) {
             for (int j = 0; j < cliente.getServicios().size(); ++j) {
-                cout<<cliente.getNombre()<<" "<<cliente.getApellido()<<setw(15)<<cliente.getCuentasAhorro()[j]->getTarjeta()->getBin()<<endl;
+                if(cliente.getServicios()[j]->getTipoServicio() == "ahorro") {
+                    cout << cliente.getNombre() << " " << cliente.getApellido() << setw(15)
+                         << cliente.getServicios()[j]->getBIN()<< endl;
+                }
             }
         }
     }
@@ -91,11 +94,11 @@ void lista_cuentas_credito(vector<Cliente> &Credito){
         cout << "El banco aun no tiene clientes asociados a cuentas de Credito" << endl;
         cout<<endl;
     } else {
-        cout<<setw(5)<<"Cliente"<<setw(25)<<"Tarjeta de debito"<<endl;
+        cout<<setw(5)<<"Cliente"<<setw(25)<<"Tarjeta de credito"<<endl;
 
-        for (int i = 0; i < Credito.size(); ++i) {
-            for (int j = 0; j < Credito[i].getCuentasCredito().size(); ++j) {
-                cout<<Credito[i].getNombre()<<" "<<Credito[i].getApellido()<<setw(15)<<Credito[i].getCuentasCredito()[j]->getTarjeta()->getBin()<<endl;
+        for (auto & cliente : Credito) {
+            for (int j = 0; j < i.getCuentasCredito().size(); ++j) {
+                cout<<i.getNombre()<<" "<<i.getApellido()<<setw(15)<<i.getCuentasCredito()[j]->getTarjeta()->getBin()<<endl;
             }
         }
     }
