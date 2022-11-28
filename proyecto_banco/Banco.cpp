@@ -52,8 +52,6 @@ void Banco::Menu() {
                                 cout<<"DNI: "<<cliente.getDni()<<endl;
                                 cout<<endl;
 
-                                cout<<"Cuentas de Ahorro asociadas: "<<endl;
-
                                 if (cliente.getServicios().empty()) {
                                     cout << "El cliente no tiene cuentas asociadas" << endl;
                                 } else {
@@ -61,37 +59,6 @@ void Banco::Menu() {
                                         cliente.getServicios()[j]->getDatos();
                                     }
                                 }
-
-                                cout<<endl;
-
-//                                while (true) {
-//                                    cout << "Desea asociar una nueva cuenta con el cliente seleccionado? [S o N]:"
-//                                         << endl;
-//                                    char son;
-//                                    cin >> son;
-//
-//                                    if (son == 'S') {
-//                                        char opcion_cuenta;
-//                                        cout << "Asociar una Cuenta de Ahorro o de Credito? [A o C]" << endl;
-//                                        cin >> opcion_cuenta;
-//
-//                                        if (opcion_cuenta == 'A') {
-//                                            auto nueva_cuenta_ahorro = crear_cuenta_ahorro();
-//
-//                                            clientes[i] + nueva_cuenta_ahorro;
-//                                            cuentasAhorro.push_back(clientes[i]);
-//                                        } else if (opcion_cuenta == 'C') {
-//                                            auto nueva_cuenta_credito = crear_cuenta_credito();
-//
-//                                            clientes[i] + nueva_cuenta_credito;
-//                                            cuentasCredito.push_back(clientes[i]);
-//                                        }
-//
-//                                        cout << "Asociando Cuenta..." << endl;
-//
-//                                    } else if (son == 'N')
-//                                        break;
-//                                }
                             } else
                                 cout<<"No se encontro al cliente"<<endl;
                         }
@@ -108,7 +75,7 @@ void Banco::Menu() {
                     }
                 }
 
-                    // Opción 2: Agregar Clientes
+                // Opción 2: Agregar Clientes
                 else if (suboption == 2) {
                     while (true) {
                         cout << "AGREGAR CLIENTES" << endl;
@@ -168,7 +135,7 @@ void Banco::Menu() {
                     cout<<endl;
                 }
 
-                    // Opción 3: Eliminar Clientes
+                // Opción 3: Eliminar Clientes
                 else if (suboption == 3) {
                     while(true) {
                         cout << "ELIMINAR CLIENTES" << endl;
@@ -186,6 +153,8 @@ void Banco::Menu() {
                                 cout<<"No se encontró al cliente"<<endl;
                         }
 
+                        cout<<endl;
+
                         cout << "Desea eliminar otro cliente? [S o N]" << endl;
                         char son; cin >> son;
 
@@ -198,7 +167,7 @@ void Banco::Menu() {
                     cout<<endl;
                 }
 
-                    // Opción 4: Regresar al Menú
+                // Opción 4: Regresar al Menú
                 else if (suboption == 4) {
                     cout << "Regresando al menu..." << endl;
                     cout<<endl;
@@ -209,13 +178,63 @@ void Banco::Menu() {
 
         // Opción 2: Cuentas de ahorro
         else if (option == 2) {
-            cout << "CUENTAS DE AHORRO" << endl;
+            while (true) {
+                cout << "CUENTAS DE AHORRO" << endl;
 
-            lista_cuentas_ahorro(clientes);
+                lista_cuentas_ahorro(clientes);
 
-            // Buscar el cliente
+                cout<<endl;
 
-            // Bloquear o agregar una tarjeta de debito
+                cout<<"1. Buscar Clientes"<<endl;
+                cout<<"2. Regresar al Menu"<<endl;
+
+                int suboption = seleccionar_opcion(4);
+
+                cout << endl;
+
+                // Opcion 1: Buscar el cliente
+                if(suboption == 1){
+                    cout<<"Ingrese el nombre del cliente que desea buscar:"<<endl;
+                    string n; cin >> n;
+
+                    for (auto & cliente : clientes) {
+                        if(n == cliente.getNombre()){
+                            cout<<"Cliente: "<<cliente.getNombre()<<" "<<cliente.getApellido()<<endl;
+                            cout<<"Edad: "<<cliente.getEdad()<<endl;
+                            cout<<"DNI: "<<cliente.getDni()<<endl;
+                            cout<<endl;
+
+                            if (cliente.getServicios().empty()) {
+                                cout << "El cliente no tiene cuentas asociadas" << endl;
+                            } else {
+                                for (int j = 0; j < cliente.getServicios().size(); ++j) {
+                                    cliente.getServicios()[j]->getDatos();
+                                }
+                            }
+                        } else
+                            cout<<"No se encontro al cliente"<<endl;
+                    }
+
+                    cout<<endl;
+
+                    cout << "Desea buscar a otro cliente? [S o N]" << endl;
+                    char son; cin >> son;
+
+                    if (son == 'N') {
+                        cout << "Regresando a la Lista de Clientes..." << endl;
+                        break;
+                    }
+                }
+
+                // Opción 2: Regresar al menú
+                else if(suboption == 2){
+                    cout << "Regresando al menu..." << endl;
+                    cout<<endl;
+                    break;
+                }
+
+                // Bloquear o agregar una tarjeta de debito
+            }
         }
 
         // Opción 3: Cuentas de crédito

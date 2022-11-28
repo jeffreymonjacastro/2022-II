@@ -15,7 +15,7 @@ public:
     // Constructor para hacer una composición con la tarjeta de débito
     CuentadeAhorro(long int b, string f){
         tarjeta_debito = new TarjetadeDebito(b, f);
-        tipo_servicio = "ahorros";
+        tipo_servicio = "ahorro";
     }
 
     void getDatos(){
