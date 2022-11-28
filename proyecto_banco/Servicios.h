@@ -2,23 +2,22 @@
 #define P2_CPP_SERVICIOS_H
 
 #include <iostream>
-#include "Tarjeta.h"
+#include "TarjetadeDebito.h"
+#include "TarjetadeCredito.h"
 
 using namespace std;
 
 class Servicios {
 protected:
-    Tarjeta *tarjeta;
+    TarjetadeDebito* tarjeta_debito;
+    TarjetadeCredito* tarjeta_credito;
 public:
     Servicios() {}
 
-    Servicios(long int b, string f) {
-        tarjeta = new Tarjeta(b, f);
-    }
-
     virtual ~Servicios() {}
 
-    virtual Tarjeta *getTarjeta() = 0;
+    virtual TarjetadeDebito* getTarjetaDebito() = 0;
+    virtual TarjetadeCredito* getTarjetaCredito() = 0;
 };
 
 #endif //P2_CPP_SERVICIOS_H

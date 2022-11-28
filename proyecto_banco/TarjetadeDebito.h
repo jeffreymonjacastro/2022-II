@@ -6,10 +6,12 @@
 
 using namespace std;
 
-class TarjetadeDebito: public Tarjeta {
-
+class TarjetadeDebito {
+private:
+    long int BIN;
+    string fecha_caducidad;
 public:
-    TarjetadeDebito(long int b, string f): Tarjeta(b, f){}
+    TarjetadeDebito(long int b, string f): BIN(b), fecha_caducidad(f){}
 
     virtual ~TarjetadeDebito(){}
 
@@ -17,6 +19,10 @@ public:
         cout<<BIN;
         cout<<fecha_caducidad;
     }
+
+    long int getBin(){return BIN;}
+
+    string getFechaCaducidad(){return fecha_caducidad;}
 };
 
 #endif //P2_CPP_TARJETADEDEBITO_H

@@ -19,11 +19,11 @@ public:
 
     // Constructor para hacer una composición con la tarjeta de débito
     CuentadeAhorro(long int b, string f){
-        tarjeta = new TarjetadeDebito(b, f);
+        tarjeta_debito = new TarjetadeDebito(b, f);
     }
 
     void getDatos(){
-        cout<<""
+        cout<<tarjeta_debito.ge
     }
 
     // Métodos
@@ -37,7 +37,7 @@ public:
     virtual ~CuentadeAhorro(){}
 
     // Métodos
-    Tarjeta* getTarjeta(){return tarjeta;}
+    TarjetadeDebito* getTarjeta(){return tarjeta_debito;}
 };
 
 #endif //P2_CPP_CUENTADEAHORRO_H

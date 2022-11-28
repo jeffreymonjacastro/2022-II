@@ -18,7 +18,7 @@ public:
 
     // Constructor para asociar la tarjeta de crédito
     CuentadeCredito(long int b, string f, double ml, string fc, string fp){
-        tarjeta = new TarjetadeCredito(b, f, ml, fc, fp);
+        tarjeta_credito = new TarjetadeCredito(b, f, ml, fc, fp);
     }
 
     // Métodos
@@ -32,7 +32,7 @@ public:
     virtual ~CuentadeCredito(){}
 
     // Métodos
-    Tarjeta* getTarjeta(){return tarjeta;}
+    TarjetadeCredito* getTarjeta(){return tarjeta_credito;}
 };
 
 #endif //P2_CPP_CUENTADECREDITO_H
