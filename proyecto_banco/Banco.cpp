@@ -209,41 +209,19 @@ void Banco::Menu() {
                             }
 
                             cout<<endl;
-                            cout << "Desea agregar o bloquear una cuenta con el cliente seleccionado? [S o N]:" << endl;
+                            cout << "Desea agregar una nueva cuenta con el cliente seleccionado? [S o N]:" << endl;
                             char son; cin >> son;
 
                             if (son == 'S') {
-                                cout<<"1. Agregar cuenta"<<endl;
-                                cout<<"2. Bloquear cuenta"<<endl;
 
-                                int suboption2 = seleccionar_opcion(2);
+                                auto nueva_cuenta_ahorro = crear_cuenta_ahorro();
 
-                                cout << endl;
+                                cliente + nueva_cuenta_ahorro;
 
-                                // Opcion 1: Agregar cuenta
-                                if (suboption2 == 1) {
-                                    auto nueva_cuenta_ahorro = crear_cuenta_ahorro();
+                                cout << "Asociando Cuenta..." << endl;
 
-                                    cliente + nueva_cuenta_ahorro;
+                                cout<<"Se asocia la tarjeta de debito con bin: "<<nueva_cuenta_ahorro->getTarjeta()->getBin()<<" y fecha de caducidad: "<<nueva_cuenta_ahorro->getTarjeta()->getFechaCaducidad()<<endl;
 
-                                    cout << "Asociando Cuenta..." << endl;
-
-                                    cout<<"Se asocia la tarjeta de debito con bin: "<<nueva_cuenta_ahorro->getTarjeta()->getBin()<<" y fecha de caducidad: "<<nueva_cuenta_ahorro->getTarjeta()->getFechaCaducidad()<<endl;
-                                }
-
-                                // Opcion 2: Bloquear cuenta
-                                else if(suboption2 == 2){
-                                    cout<<"Ingrese el BIN de la tarjeta: "<<endl;
-                                    long b; cin>>b;
-
-                                    for (int i = 0; i < cliente.getServicios().size(); ++i) {
-                                        if(b == cliente.getServicios()[i]->getBIN()){
-                                            cliente.getServicios().erase(cliente.getServicios().begin()+i);
-                                            cout<<"Cuenta bloqueada"<<endl;
-                                        } else
-                                            cout<<"No se encontro la tarjeta"<<endl;
-                                    }
-                                }
                             }
                         } else
                             cout<<"No se encontro al cliente"<<endl;
@@ -272,13 +250,74 @@ void Banco::Menu() {
 
         // Opción 3: Cuentas de crédito
         else if (option == 3) {
-            cout << "CUENTAS DE CREDITO" << endl;
+            while (true) {
+                cout << "CUENTAS DE CREDITO" << endl;
 
-            lista_cuentas_credito(clientes);
+                lista_cuentas_credito(clientes);
 
-            // Buscar el cliente
+                cout<<endl;
 
-            // Bloquear o agregar una tarjeta de credit
+                cout<<"1. Buscar Clientes"<<endl;
+                cout<<"2. Regresar al Menu"<<endl;
+
+                int suboption = seleccionar_opcion(2);
+
+                cout << endl;
+
+                // Opcion 1: Buscar el cliente
+                if(suboption == 1){
+                    cout<<"Ingrese el nombre del cliente que desea buscar:"<<endl;
+                    string n; cin >> n;
+
+                    for (auto & cliente : clientes) {
+                        if(n == cliente.getNombre()){
+                            cout<<"Cliente: "<<cliente.getNombre()<<" "<<cliente.getApellido()<<endl;
+                            cout<<"Edad: "<<cliente.getEdad()<<endl;
+                            cout<<"DNI: "<<cliente.getDni()<<endl;
+
+                            for (int i = 0; i < cliente.getServicios().size(); ++i) {
+                                if(cliente.getServicios()[i]->getTipoServicio() == "credito")
+                                    cliente.getServicios()[i]->getDatos();
+                            }
+
+                            cout<<endl;
+                            cout << "Desea agregar una nueva cuenta con el cliente seleccionado? [S o N]:" << endl;
+                            char son; cin >> son;
+
+                            if (son == 'S') {
+
+                                auto nueva_cuenta_credito = crear_cuenta_credito();
+
+                                cliente + nueva_cuenta_credito;
+
+                                cout << "Asociando Cuenta..." << endl;
+
+                                cout<<"Se asocia la tarjeta de debito con bin: "<<nueva_cuenta_credito->getTarjeta()->getBin()<<" y fecha de caducidad: "<<nueva_cuenta_credito->getTarjeta()->getFechaCaducidad()<<endl;
+
+                            }
+                        } else
+                            cout<<"No se encontro al cliente"<<endl;
+                    }
+
+                    cout<<endl;
+
+                    cout << "Desea buscar a otro cliente? [S o N]:" << endl;
+                    char son; cin >> son;
+
+                    if (son == 'N') {
+                        cout << "Regresando a la Lista de Clientes..." << endl;
+                        cout<<endl;
+                        break;
+                    }
+                }
+
+                    // Opción 2: Regresar al menú
+                else if(suboption == 2){
+                    cout << "Regresando al menu..." << endl;
+                    cout<<endl;
+                    break;
+                }
+            }
         }
 
             // Opción 4: Cerrar el programa
