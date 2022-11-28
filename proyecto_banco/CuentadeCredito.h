@@ -19,6 +19,18 @@ public:
     // Constructor para asociar la tarjeta de crédito
     CuentadeCredito(long int b, string f, double ml, string fc, string fp){
         tarjeta_credito = new TarjetadeCredito(b, f, ml, fc, fp);
+        tipo_servicio = "credito";
+    }
+
+    void getDatos(){
+        cout<<endl;
+        cout<<"Cuenta de Credito"<<endl;
+        cout<<"================="<<endl;
+        cout<<"BIN: "<<tarjeta_credito->getBin()<<endl;
+        cout<<"Fecha de caducidad: "<<tarjeta_credito->getFechaCaducidad()<<endl;
+        cout<<"Monto limite: "<<tarjeta_credito->getMontoLimite()<<endl;
+        cout<<"Fecha de corte: "<<tarjeta_credito->getFechaCorte()<<endl;
+        cout<<"Fecha de pago: "<<tarjeta_credito->getFechaPago()<<endl;
     }
 
     // Métodos

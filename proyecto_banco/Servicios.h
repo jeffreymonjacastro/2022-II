@@ -9,6 +9,7 @@ using namespace std;
 
 class Servicios {
 protected:
+    string tipo_servicio;
     TarjetadeDebito* tarjeta_debito;
     TarjetadeCredito* tarjeta_credito;
 public:
@@ -16,8 +17,8 @@ public:
 
     virtual ~Servicios() {}
 
-    virtual TarjetadeDebito* getTarjetaDebito() = 0;
-    virtual TarjetadeCredito* getTarjetaCredito() = 0;
+    virtual void getDatos() = 0;
+
 };
 
 #endif //P2_CPP_SERVICIOS_H

@@ -19,12 +19,6 @@ public:
 
     virtual ~TarjetadeCredito(){}
 
-    void getDatos(){
-        cout<<monto_limite<<endl;
-        cout<<fecha_corte<<endl;
-        cout<<fecha_pago<<endl;
-    }
-
     // Getters
     long int getBin(){return BIN;}
 

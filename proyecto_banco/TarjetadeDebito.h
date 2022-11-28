@@ -15,11 +15,6 @@ public:
 
     virtual ~TarjetadeDebito(){}
 
-    void getDatos(){
-        cout<<BIN;
-        cout<<fecha_caducidad;
-    }
-
     long int getBin(){return BIN;}
 
     string getFechaCaducidad(){return fecha_caducidad;}

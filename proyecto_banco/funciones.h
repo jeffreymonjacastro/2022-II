@@ -77,9 +77,9 @@ void lista_cuentas_ahorro(vector<Cliente> &Ahorro){
     } else {
         cout<<setw(5)<<"Cliente"<<setw(25)<<"Tarjeta de debito"<<endl;
 
-        for (int i = 0; i < Ahorro.size(); ++i) {
-            for (int j = 0; j < Ahorro[i].getCuentasAhorro().size(); ++j) {
-                cout<<Ahorro[i].getNombre()<<" "<<Ahorro[i].getApellido()<<setw(15)<<Ahorro[i].getCuentasAhorro()[j]->getTarjeta()->getBin()<<endl;
+        for (auto & i : Ahorro) {
+            for (int j = 0; j < i.getCuentasAhorro().size(); ++j) {
+                cout<<i.getNombre()<<" "<<i.getApellido()<<setw(15)<<i.getCuentasAhorro()[j]->getTarjeta()->getBin()<<endl;
             }
         }
     }

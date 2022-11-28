@@ -43,78 +43,55 @@ void Banco::Menu() {
                         cout << "BUSCAR CLIENTES" << endl;
 
                         cout<<"Ingrese el nombre del cliente que desea buscar:"<<endl;
-                        string name; cin>>name;
+                        string n; cin >> n;
 
-                        for (int i = 0; i < clientes.size(); ++i) {
-                            if(name == clientes[i].getNombre()){
-                                cout<<"Cliente: "<<clientes[i].getNombre()<<" "<<clientes[i].getApellido()<<endl;
-                                cout<<"Edad: "<<clientes[i].getEdad()<<endl;
-                                cout<<"DNI: "<<clientes[i].getDni()<<endl;
+                        for (auto & cliente : clientes) {
+                            if(n == cliente.getNombre()){
+                                cout<<"Cliente: "<<cliente.getNombre()<<" "<<cliente.getApellido()<<endl;
+                                cout<<"Edad: "<<cliente.getEdad()<<endl;
+                                cout<<"DNI: "<<cliente.getDni()<<endl;
                                 cout<<endl;
 
                                 cout<<"Cuentas de Ahorro asociadas: "<<endl;
 
-                                if (clientes[i].getCuentasAhorro().empty()) {
-                                    cout << "El cliente no tiene cuentas de ahorro asociadas" << endl;
+                                if (cliente.getServicios().empty()) {
+                                    cout << "El cliente no tiene cuentas asociadas" << endl;
                                 } else {
-                                    for (int j = 0; j < clientes[i].getCuentasAhorro().size(); ++j) {
-                                        cout<<"Cuenta de Ahorro "<<j+1<<":"<<endl;
-                                        cout<<"Tarjeta de debito: "<<endl;
-                                        cout<<"BIN: "<<clientes[i].getCuentasAhorro()[j]->getTarjeta()->getBin()<<endl;
-                                        cout<<"Fecha de caducidad: "<<clientes[i].getCuentasAhorro()[j]->getTarjeta()->getFechaCaducidad()<<endl;
-                                        cout<<endl;
+                                    for (int j = 0; j < cliente.getServicios().size(); ++j) {
+                                        cliente.getServicios()[j]->getDatos();
                                     }
                                 }
 
                                 cout<<endl;
 
-                                cout<<"Cuentas de Credito asociadas: "<<endl;
-
-                                if (clientes[i].getCuentasCredito().empty()) {
-                                    cout << "El cliente no tiene cuentas de credito asociadas" << endl;
-                                } else {
-                                    for (int j = 0; j < clientes[i].getCuentasCredito().size(); ++j) {
-                                        cout<<"Cuenta de Credito "<<j+1<<":"<<endl;
-                                        cout<<"Tarjeta de credito: "<<endl;
-                                        cout<<"BIN: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getBin()<<endl;
-                                        cout<<"Fecha de caducidad: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaCaducidad()<<endl;
-                                        cout<<"Monto Limite: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getDatos()
-                                        cout<<"Fecha de corte: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaCorte()<<endl;
-                                        cout<<"Fecha de pago: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaPago()<<endl;
-                                        cout<<endl;
-                                    }
-                                }
-
-                                cout<<endl;
-
-                                while (true) {
-                                    cout << "Desea asociar una nueva cuenta con el cliente seleccionado? [S o N]:"
-                                         << endl;
-                                    char son;
-                                    cin >> son;
-
-                                    if (son == 'S') {
-                                        char opcion_cuenta;
-                                        cout << "Asociar una Cuenta de Ahorro o de Credito? [A o C]" << endl;
-                                        cin >> opcion_cuenta;
-
-                                        if (opcion_cuenta == 'A') {
-                                            auto nueva_cuenta_ahorro = crear_cuenta_ahorro();
-
-                                            clientes[i] + nueva_cuenta_ahorro;
-                                            cuentasAhorro.push_back(clientes[i]);
-                                        } else if (opcion_cuenta == 'C') {
-                                            auto nueva_cuenta_credito = crear_cuenta_credito();
-
-                                            clientes[i] + nueva_cuenta_credito;
-                                            cuentasCredito.push_back(clientes[i]);
-                                        }
-
-                                        cout << "Asociando Cuenta..." << endl;
-
-                                    } else if (son == 'N')
-                                        break;
-                                }
+//                                while (true) {
+//                                    cout << "Desea asociar una nueva cuenta con el cliente seleccionado? [S o N]:"
+//                                         << endl;
+//                                    char son;
+//                                    cin >> son;
+//
+//                                    if (son == 'S') {
+//                                        char opcion_cuenta;
+//                                        cout << "Asociar una Cuenta de Ahorro o de Credito? [A o C]" << endl;
+//                                        cin >> opcion_cuenta;
+//
+//                                        if (opcion_cuenta == 'A') {
+//                                            auto nueva_cuenta_ahorro = crear_cuenta_ahorro();
+//
+//                                            clientes[i] + nueva_cuenta_ahorro;
+//                                            cuentasAhorro.push_back(clientes[i]);
+//                                        } else if (opcion_cuenta == 'C') {
+//                                            auto nueva_cuenta_credito = crear_cuenta_credito();
+//
+//                                            clientes[i] + nueva_cuenta_credito;
+//                                            cuentasCredito.push_back(clientes[i]);
+//                                        }
+//
+//                                        cout << "Asociando Cuenta..." << endl;
+//
+//                                    } else if (son == 'N')
+//                                        break;
+//                                }
                             } else
                                 cout<<"No se encontro al cliente"<<endl;
                         }
@@ -161,14 +138,14 @@ void Banco::Menu() {
                             cout<<"Se asocia la tarjeta de debito con bin: "<<nueva_cuenta_ahorro->getTarjeta()->getBin()<<" y fecha de caducidad: "<<nueva_cuenta_ahorro->getTarjeta()->getFechaCaducidad()<<endl;
 
                             cliente + nueva_cuenta_ahorro;
-                            cuentasAhorro.push_back(cliente);
+
                         } else if (opcion_cuenta == 'C') {
                             auto nueva_cuenta_credito = crear_cuenta_credito();
 
                             cout<<"Se asocia la tarjeta de credito con bin: "<<nueva_cuenta_credito->getTarjeta()->getBin()<<" y fecha de caducidad: "<<nueva_cuenta_credito->getTarjeta()->getFechaCaducidad()<<endl;
 
                             cliente + nueva_cuenta_credito;
-                            cuentasCredito.push_back(cliente);
+
                         }
 
                         cout<<endl;
@@ -197,12 +174,12 @@ void Banco::Menu() {
                         cout << "ELIMINAR CLIENTES" << endl;
 
                         cout<<"Ingrese el nombre del cliente que desea eliminar:"<<endl;
-                        string name; cin>>name;
+                        string n; cin>>n;
 
                         cout<<"Buscando cliente..."<<endl;
 
                         for (int i = 0; i < clientes.size(); ++i) {
-                            if(name == clientes[i].getNombre()){
+                            if(n == clientes[i].getNombre()){
                                 clientes.erase(clientes.begin()+i);
                                 cout<<"Cliente eliminado"<<endl;
                             } else
@@ -230,7 +207,7 @@ void Banco::Menu() {
             }
         }
 
-            // Opción 2: Cuentas de ahorro
+        // Opción 2: Cuentas de ahorro
         else if (option == 2) {
             cout << "CUENTAS DE AHORRO" << endl;
 
@@ -241,7 +218,7 @@ void Banco::Menu() {
             // Bloquear o agregar una tarjeta de debito
         }
 
-            // Opción 3: Cuentas de crédito
+        // Opción 3: Cuentas de crédito
         else if (option == 3) {
             cout << "CUENTAS DE CREDITO" << endl;
 
