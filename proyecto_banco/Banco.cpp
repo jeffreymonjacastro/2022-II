@@ -1,13 +1,7 @@
-#include "Cliente.h"
+#include "Banco.h"
 #include "funciones.h"
-#include <iomanip>
 
-int main(){
-    // Variables generales
-    vector<Cliente> clientes;
-    vector<Cliente> cuentasAhorro;
-    vector<Cliente> cuentasCredito;
-
+void Banco::Menu() {
     cout<<setw(20)<<"Banco Trivial"<<endl;
     cout<<setw(18)<<"Bienvenido"<<endl;
     cout<<"============================"<<endl;
@@ -137,7 +131,7 @@ int main(){
                     }
                 }
 
-                // Opción 2: Agregar Clientes
+                    // Opción 2: Agregar Clientes
                 else if (suboption == 2) {
                     while (true) {
                         cout << "AGREGAR CLIENTES" << endl;
@@ -197,7 +191,7 @@ int main(){
                     cout<<endl;
                 }
 
-                // Opción 3: Eliminar Clientes
+                    // Opción 3: Eliminar Clientes
                 else if (suboption == 3) {
                     while(true) {
                         cout << "ELIMINAR CLIENTES" << endl;
@@ -227,7 +221,7 @@ int main(){
                     cout<<endl;
                 }
 
-                // Opción 4: Regresar al Menú
+                    // Opción 4: Regresar al Menú
                 else if (suboption == 4) {
                     cout << "Regresando al menu..." << endl;
                     cout<<endl;
@@ -236,7 +230,7 @@ int main(){
             }
         }
 
-        // Opción 2: Cuentas de ahorro
+            // Opción 2: Cuentas de ahorro
         else if (option == 2) {
             cout << "CUENTAS DE AHORRO" << endl;
 
@@ -244,10 +238,10 @@ int main(){
 
             // Buscar el cliente
 
-                // Bloquear o agregar una tarjeta de debito
+            // Bloquear o agregar una tarjeta de debito
         }
 
-        // Opción 3: Cuentas de crédito
+            // Opción 3: Cuentas de crédito
         else if (option == 3) {
             cout << "CUENTAS DE CREDITO" << endl;
 
@@ -258,12 +252,10 @@ int main(){
             // Bloquear o agregar una tarjeta de credit
         }
 
-        // Opción 4: Cerrar el programa
+            // Opción 4: Cerrar el programa
         else if (option == 4) {
             cout<<"Hasta pronto"<<endl;
             break;
         }
     }
-
-    return 0;
 }
