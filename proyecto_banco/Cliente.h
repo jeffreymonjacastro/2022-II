@@ -15,8 +15,7 @@ private:
     string apellido;
     int edad;
     long int dni;
-    vector<CuentadeAhorro*> cuentas_ahorro;
-    vector<CuentadeCredito*> cuentas_credito;
+    vector<Servicios*> servicios;
 public:
     Cliente(){}
     Cliente(string n, string a, int e, double d): nombre(n), apellido(a), edad(e), dni(d){}
@@ -25,8 +24,7 @@ public:
         this->apellido = cliente.apellido;
         this->edad = cliente.edad;
         this->dni = cliente.dni;
-        this->cuentas_ahorro = cliente.cuentas_ahorro;
-        this->cuentas_credito = cliente.cuentas_credito;
+        this->servicios = cliente.servicios;
     }
 
     virtual ~Cliente(){}
@@ -34,11 +32,11 @@ public:
     // Al vector de cuentas de ahorro del cliente se le agrega una tarjeta de debito
     // Sobrecarga del operador para agregar una nueva Cuenta de Ahorro
     void operator+(CuentadeAhorro* debito){
-        this->cuentas_ahorro.push_back(debito);
+        this->servicios.push_back(debito);
     }
 
     void operator+(CuentadeCredito* credito){
-        this->cuentas_credito.push_back(credito);
+        this->servicios.push_back(credito);
     }
 
     // Imprimir los datos de los clientes
@@ -55,9 +53,7 @@ public:
 
     long getDni(){return dni;}
 
-    vector<CuentadeAhorro*> getCuentasAhorro(){return cuentas_ahorro;}
-
-    vector<CuentadeCredito*> getCuentasCredito(){return cuentas_credito;}
+    vector<Servicios*> getServicios(){return servicios;}
 };
 
 

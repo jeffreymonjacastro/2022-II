@@ -14,9 +14,11 @@ public:
 
     virtual ~Tarjeta(){}
 
-    long int getBin(){return BIN;}
+    virtual void getDatos() = 0;
 
-    string getFechaCaducidad(){return fecha_caducidad;}
+//    long int getBin(){return BIN;}
+//
+//    string getFechaCaducidad(){return fecha_caducidad;}
 };
 
 #endif //P2_CPP_TARJETA_H

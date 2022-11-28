@@ -78,7 +78,7 @@ void Banco::Menu() {
                                         cout<<"Tarjeta de credito: "<<endl;
                                         cout<<"BIN: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getBin()<<endl;
                                         cout<<"Fecha de caducidad: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaCaducidad()<<endl;
-                                        cout<<"Monto Limite: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getMontoLimite()<<endl;
+                                        cout<<"Monto Limite: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getDatos()
                                         cout<<"Fecha de corte: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaCorte()<<endl;
                                         cout<<"Fecha de pago: "<<clientes[i].getCuentasCredito()[j]->getTarjeta()->getFechaPago()<<endl;
                                         cout<<endl;

@@ -22,6 +22,10 @@ public:
         tarjeta = new TarjetadeDebito(b, f);
     }
 
+    void getDatos(){
+        cout<<""
+    }
+
     // Métodos
     // Historial
 //    CuentadeAhorro(string d, double m, string f){
