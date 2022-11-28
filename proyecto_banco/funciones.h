@@ -25,7 +25,7 @@ int seleccionar_opcion(int max){
 CuentadeAhorro* crear_cuenta_ahorro(){
     srand(time(nullptr));
 
-    long int bin = rand()%899999 + 100000;
+    long int bin = rand()%100000 + 899999;
 
     vector<int> meses = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 
@@ -41,7 +41,7 @@ CuentadeAhorro* crear_cuenta_ahorro(){
 CuentadeCredito* crear_cuenta_credito(){
     srand(time(nullptr));
 
-    long int bin = rand()%899999 + 100000;
+    long int bin = rand()%100000 + 899999;
 
     vector<int> meses = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 

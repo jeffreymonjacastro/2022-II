@@ -65,7 +65,7 @@ void Banco::Menu() {
 
                         cout<<endl;
 
-                        cout << "Desea buscar a otro cliente? [S o N]" << endl;
+                        cout << "Desea buscar a otro cliente? [S o N]:" << endl;
                         char son; cin >> son;
 
                         if (son == 'N') {
@@ -188,7 +188,7 @@ void Banco::Menu() {
                 cout<<"1. Buscar Clientes"<<endl;
                 cout<<"2. Regresar al Menu"<<endl;
 
-                int suboption = seleccionar_opcion(4);
+                int suboption = seleccionar_opcion(2);
 
                 cout << endl;
 
@@ -202,13 +202,47 @@ void Banco::Menu() {
                             cout<<"Cliente: "<<cliente.getNombre()<<" "<<cliente.getApellido()<<endl;
                             cout<<"Edad: "<<cliente.getEdad()<<endl;
                             cout<<"DNI: "<<cliente.getDni()<<endl;
-                            cout<<endl;
 
-                            if (cliente.getServicios().empty()) {
-                                cout << "El cliente no tiene cuentas asociadas" << endl;
-                            } else {
-                                for (int j = 0; j < cliente.getServicios().size(); ++j) {
-                                    cliente.getServicios()[j]->getDatos();
+                            for (int i = 0; i < cliente.getServicios().size(); ++i) {
+                                if(cliente.getServicios()[i]->getTipoServicio() == "ahorro")
+                                    cliente.getServicios()[i]->getDatos();
+                            }
+
+                            cout<<endl;
+                            cout << "Desea agregar o bloquear una cuenta con el cliente seleccionado? [S o N]:" << endl;
+                            char son; cin >> son;
+
+                            if (son == 'S') {
+                                cout<<"1. Agregar cuenta"<<endl;
+                                cout<<"2. Bloquear cuenta"<<endl;
+
+                                int suboption2 = seleccionar_opcion(2);
+
+                                cout << endl;
+
+                                // Opcion 1: Agregar cuenta
+                                if (suboption2 == 1) {
+                                    auto nueva_cuenta_ahorro = crear_cuenta_ahorro();
+
+                                    cliente + nueva_cuenta_ahorro;
+
+                                    cout << "Asociando Cuenta..." << endl;
+
+                                    cout<<"Se asocia la tarjeta de debito con bin: "<<nueva_cuenta_ahorro->getTarjeta()->getBin()<<" y fecha de caducidad: "<<nueva_cuenta_ahorro->getTarjeta()->getFechaCaducidad()<<endl;
+                                }
+
+                                // Opcion 2: Bloquear cuenta
+                                else if(suboption2 == 2){
+                                    cout<<"Ingrese el BIN de la tarjeta: "<<endl;
+                                    long b; cin>>b;
+
+                                    for (int i = 0; i < cliente.getServicios().size(); ++i) {
+                                        if(b == cliente.getServicios()[i]->getBIN()){
+                                            cliente.getServicios().erase(cliente.getServicios().begin()+i);
+                                            cout<<"Cuenta bloqueada"<<endl;
+                                        } else
+                                            cout<<"No se encontro la tarjeta"<<endl;
+                                    }
                                 }
                             }
                         } else
@@ -217,11 +251,12 @@ void Banco::Menu() {
 
                     cout<<endl;
 
-                    cout << "Desea buscar a otro cliente? [S o N]" << endl;
+                    cout << "Desea buscar a otro cliente? [S o N]:" << endl;
                     char son; cin >> son;
 
                     if (son == 'N') {
                         cout << "Regresando a la Lista de Clientes..." << endl;
+                        cout<<endl;
                         break;
                     }
                 }
@@ -232,8 +267,6 @@ void Banco::Menu() {
                     cout<<endl;
                     break;
                 }
-
-                // Bloquear o agregar una tarjeta de debito
             }
         }
 
