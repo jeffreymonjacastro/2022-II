@@ -3,4 +3,4 @@ project(2022_II)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(practice 2023-0_practice_fiestas/S1_Introduction/lab2.cpp)
+add_executable(practice 2023-0_practice_fiestas/S2/teo.cpp)
